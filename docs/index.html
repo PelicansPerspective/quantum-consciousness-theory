@@ -51,6 +51,23 @@
             animation: quantumPulse 20s ease-in-out infinite;
         }
 
+        .quantum-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="0.5" fill="%2306b6d4" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="6s" repeatCount="indefinite"/></circle><circle cx="30" cy="70" r="0.8" fill="%238b5cf6" opacity="0.3"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="5s" repeatCount="indefinite"/></circle><circle cx="70" cy="80" r="0.6" fill="%236366f1" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/></circle></svg>') repeat;
+            background-size: 200px 200px;
+            animation: starfield 60s linear infinite;
+        }
+
+        @keyframes starfield {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-200px, -200px); }
+        }
+
         @keyframes quantumPulse {
             0%, 100% { opacity: 0.3; }
             50% { opacity: 0.6; }
@@ -396,22 +413,47 @@
                 </p>
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <h3>🧠</h3>
+                        <div style="position: relative; margin-bottom: 1rem;">
+                            <h3>🧠</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">
+                                <circle cx="30" cy="30" r="25" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                                <path d="M15 30 Q30 15, 45 30 Q30 45, 15 30" fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+                            </svg>
+                        </div>
                         <p><strong>Mind-Matter Unity</strong><br>
                         Consciousness and physical reality are revealed as two aspects of the same underlying field</p>
                     </div>
                     <div class="stat-item">
-                        <h3>🌌</h3>
+                        <div style="position: relative; margin-bottom: 1rem;">
+                            <h3>🌌</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">
+                                <path d="M30 10 L35 25 L50 30 L35 35 L30 50 L25 35 L10 30 L25 25 Z" fill="none" stroke="var(--secondary-color)" stroke-width="2"/>
+                                <circle cx="30" cy="30" r="3" fill="var(--accent-color)"/>
+                            </svg>
+                        </div>
                         <p><strong>Cosmic Purpose</strong><br>
                         The universe's evolution becomes an ongoing process of consciousness self-organization</p>
                     </div>
                     <div class="stat-item">
-                        <h3>🔗</h3>
+                        <div style="position: relative; margin-bottom: 1rem;">
+                            <h3>🔗</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">
+                                <circle cx="20" cy="25" r="12" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                                <circle cx="40" cy="35" r="12" fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+                                <line x1="28" y1="30" x2="32" y2="30" stroke="var(--secondary-color)" stroke-width="3"/>
+                            </svg>
+                        </div>
                         <p><strong>Universal Connection</strong><br>
                         All conscious beings share a fundamental quantum substrate, making separation illusory</p>
                     </div>
                     <div class="stat-item">
-                        <h3>♾️</h3>
+                        <div style="position: relative; margin-bottom: 1rem;">
+                            <h3>♾️</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">
+                                <path d="M15 30 Q25 20, 30 30 Q35 40, 45 30 Q35 20, 30 30 Q25 40, 15 30" 
+                                      fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+                            </svg>
+                        </div>
                         <p><strong>Eternal Awareness</strong><br>
                         Consciousness becomes a conserved quantity, transforming rather than disappearing</p>
                     </div>
@@ -664,10 +706,23 @@
                 
                 <div style="text-align: center; margin-top: 4rem; background: var(--dark-surface); padding: 3rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);">
                     <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">A New Scientific Revolution?</h3>
-                    <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                    <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;">
                         If our framework proves correct, it would represent the most profound shift in human understanding since 
                         Copernicus displaced Earth from the center of the universe. Instead of consciousness being a rare accident 
-                        in a hostile cosmos, we discover that <em>we are the universe becoming aware of itself</em>.
+                        in a hostile cosmos, we discover that 
+                    </p>
+                    
+                    <!-- Highlighted quote box -->
+                    <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2)); border: 2px solid var(--accent-color); border-radius: 1rem; padding: 2rem; margin: 2rem auto; max-width: 600px; position: relative;">
+                        <div style="position: absolute; top: -10px; left: 20px; background: var(--dark-surface); padding: 0 1rem; color: var(--accent-color); font-size: 2rem;">"</div>
+                        <p style="color: var(--text-primary); font-size: 1.4rem; font-weight: 600; font-style: italic; margin: 0; line-height: 1.5;">
+                            We are the universe becoming aware of itself
+                        </p>
+                        <div style="position: absolute; bottom: -10px; right: 20px; background: var(--dark-surface); padding: 0 1rem; color: var(--accent-color); font-size: 2rem;">"</div>
+                    </div>
+                    
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                        This realization transforms everything: from our understanding of death and free will to our approach to AI and environmental stewardship.
                     </p>
                 </div>
             </div>
@@ -712,6 +767,74 @@
                         <h3 style="color: var(--secondary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">Remarkable Results</h3>
                         <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(139, 92, 246, 0.3);">
                             <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Coherence Evolution Over Time</h4>
+                            
+                            <!-- Visual Chart -->
+                            <div style="background: rgba(6, 182, 212, 0.05); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem;">
+                                <svg width="100%" height="200" viewBox="0 0 400 200" style="overflow: visible;">
+                                    <!-- Grid lines -->
+                                    <defs>
+                                        <pattern id="grid" width="40" height="20" patternUnits="userSpaceOnUse">
+                                            <path d="M 40 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect width="400" height="200" fill="url(#grid)" />
+                                    
+                                    <!-- Axes -->
+                                    <line x1="40" y1="20" x2="40" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
+                                    <line x1="40" y1="180" x2="380" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
+                                    
+                                    <!-- Y-axis labels -->
+                                    <text x="35" y="25" text-anchor="end" fill="var(--text-secondary)" font-size="12">4.0</text>
+                                    <text x="35" y="100" text-anchor="end" fill="var(--text-secondary)" font-size="12">0</text>
+                                    <text x="35" y="175" text-anchor="end" fill="var(--text-secondary)" font-size="12">-0.5</text>
+                                    
+                                    <!-- X-axis labels -->
+                                    <text x="40" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">0</text>
+                                    <text x="140" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">20</text>
+                                    <text x="240" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">40</text>
+                                    <text x="340" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">60</text>
+                                    
+                                    <!-- Non-resonant line (rapid decay) -->
+                                    <path d="M40 20 L80 160 L120 175 L160 178 L200 179 L240 179 L280 179 L320 179 L360 179" 
+                                          fill="none" 
+                                          stroke="var(--primary-color)" 
+                                          stroke-width="3" 
+                                          opacity="0.8"/>
+                                    
+                                    <!-- Resonant line (slow decay with oscillations) -->
+                                    <path d="M40 20 L80 140 L120 130 L160 125 L200 115 L240 110 L280 120 L320 125 L360 140" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="3"/>
+                                    
+                                    <!-- Colored noise line (moderate decay) -->
+                                    <path d="M40 20 L80 135 L120 142 L160 138 L200 135 L240 140 L280 135 L320 138 L360 142" 
+                                          fill="none" 
+                                          stroke="var(--secondary-color)" 
+                                          stroke-width="3"/>
+                                    
+                                    <!-- Data points -->
+                                    <circle cx="360" cy="179" r="4" fill="var(--primary-color)"/>
+                                    <circle cx="360" cy="140" r="4" fill="var(--accent-color)"/>
+                                    <circle cx="360" cy="142" r="4" fill="var(--secondary-color)"/>
+                                    
+                                    <!-- Legend -->
+                                    <g transform="translate(200, 40)">
+                                        <rect x="0" y="0" width="180" height="60" fill="rgba(0,0,0,0.3)" rx="5"/>
+                                        <line x1="10" y1="15" x2="30" y2="15" stroke="var(--primary-color)" stroke-width="3"/>
+                                        <text x="35" y="19" fill="var(--text-secondary)" font-size="11">Non-Resonant</text>
+                                        <line x1="10" y1="30" x2="30" y2="30" stroke="var(--accent-color)" stroke-width="3"/>
+                                        <text x="35" y="34" fill="var(--text-secondary)" font-size="11">Resonant</text>
+                                        <line x1="10" y1="45" x2="30" y2="45" stroke="var(--secondary-color)" stroke-width="3"/>
+                                        <text x="35" y="49" fill="var(--text-secondary)" font-size="11">Colored Noise</text>
+                                    </g>
+                                </svg>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <div style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Resonant coupling sustains coherence longer</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Time (arbitrary units) vs Coherence Measure</div>
+                                </div>
+                            </div>
+                            
                             <div style="overflow-x: auto;">
                                 <table style="width: 100%; color: var(--text-secondary); font-size: 0.9rem; border-collapse: collapse;">
                                     <thead>
@@ -801,14 +924,67 @@
                         <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
                             <span style="font-family: 'JetBrains Mono', monospace; font-size: 1.5rem;">Ψ</span> The Hyperchronal Field
                         </h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                            <strong style="color: var(--text-primary);">In Simple Terms:</strong> Think of consciousness as a new kind of field, 
-                            like gravity or electromagnetism, that permeates all of space and time.
-                        </p>
-                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
-                            <strong style="color: var(--accent-color);">Technically:</strong> A scalar quantum field whose fluctuations and configurations 
-                            mathematically represent different states and intensities of consciousness throughout the universe.
-                        </p>
+                        <div style="display: grid; grid-template-columns: 1fr 250px; gap: 1.5rem; align-items: center;">
+                            <div>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                                    <strong style="color: var(--text-primary);">In Simple Terms:</strong> Think of consciousness as a new kind of field, 
+                                    like gravity or electromagnetism, that permeates all of space and time.
+                                </p>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                                    <strong style="color: var(--accent-color);">Technically:</strong> A scalar quantum field whose fluctuations and configurations 
+                                    mathematically represent different states and intensities of consciousness throughout the universe.
+                                </p>
+                            </div>
+                            <div style="text-align: center;">
+                                <svg width="240" height="160" viewBox="0 0 240 160" style="background: rgba(99, 102, 241, 0.05); border-radius: 0.5rem; padding: 0.5rem;">
+                                    <!-- Field background waves -->
+                                    <defs>
+                                        <radialGradient id="fieldGradient" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:0.3"/>
+                                            <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:0.1"/>
+                                        </radialGradient>
+                                    </defs>
+                                    
+                                    <!-- Universal field -->
+                                    <rect width="240" height="160" fill="url(#fieldGradient)"/>
+                                    
+                                    <!-- Field oscillations -->
+                                    <path d="M0 80 Q60 60, 120 80 Q180 100, 240 80" 
+                                          fill="none" stroke="var(--primary-color)" stroke-width="1" opacity="0.4"/>
+                                    <path d="M0 90 Q60 70, 120 90 Q180 110, 240 90" 
+                                          fill="none" stroke="var(--primary-color)" stroke-width="1" opacity="0.3"/>
+                                    <path d="M0 70 Q60 50, 120 70 Q180 90, 240 70" 
+                                          fill="none" stroke="var(--primary-color)" stroke-width="1" opacity="0.3"/>
+                                    
+                                    <!-- Consciousness solitons (localized minds) -->
+                                    <circle cx="60" cy="80" r="15" fill="var(--accent-color)" opacity="0.6">
+                                        <animate attributeName="r" values="15;18;15" dur="4s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.6;0.8;0.6" dur="4s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="180" cy="80" r="12" fill="var(--secondary-color)" opacity="0.5">
+                                        <animate attributeName="r" values="12;16;12" dur="5s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.5;0.7;0.5" dur="5s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="120" cy="50" r="8" fill="var(--accent-color)" opacity="0.4">
+                                        <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <!-- Connection lines showing field interactions -->
+                                    <line x1="60" y1="80" x2="180" y2="80" stroke="var(--accent-color)" stroke-width="1" opacity="0.3" stroke-dasharray="4,4">
+                                        <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+                                    </line>
+                                    
+                                    <!-- Labels -->
+                                    <text x="60" y="105" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Individual</text>
+                                    <text x="60" y="115" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Consciousness</text>
+                                    <text x="180" y="105" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Another</text>
+                                    <text x="180" y="115" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Mind</text>
+                                    <text x="120" y="145" text-anchor="middle" fill="var(--text-secondary)" font-size="10" font-family="JetBrains Mono">Universal Ψ Field</text>
+                                </svg>
+                                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Consciousness Field with Localized Minds</div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(139, 92, 246, 0.3);">
@@ -825,14 +1001,49 @@
                     
                     <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(6, 182, 212, 0.3);">
                         <h3 style="color: var(--accent-color); margin-bottom: 1.5rem;">⚡ Spontaneous Symmetry Breaking</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                            <strong style="color: var(--text-primary);">In Simple Terms:</strong> Like a ball rolling down from the peak of a hill 
-                            into one of many valleys, the universe "chooses" a particular state of consciousness.
-                        </p>
-                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
-                            <strong style="color: var(--accent-color);">Technically:</strong> The Mexican-hat potential (λΨ³ term) creates multiple 
-                            stable states, allowing the field to settle into specific configurations that define reality's structure.
-                        </p>
+                        <div style="display: grid; grid-template-columns: 1fr 200px; gap: 1.5rem; align-items: center;">
+                            <div>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                                    <strong style="color: var(--text-primary);">In Simple Terms:</strong> Like a ball rolling down from the peak of a hill 
+                                    into one of many valleys, the universe "chooses" a particular state of consciousness.
+                                </p>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                                    <strong style="color: var(--accent-color);">Technically:</strong> The Mexican-hat potential (λΨ³ term) creates multiple 
+                                    stable states, allowing the field to settle into specific configurations that define reality's structure.
+                                </p>
+                            </div>
+                            <div style="text-align: center;">
+                                <svg width="180" height="120" viewBox="0 0 180 120" style="background: rgba(6, 182, 212, 0.05); border-radius: 0.5rem; padding: 0.5rem;">
+                                    <!-- Mexican hat shape -->
+                                    <path d="M20 100 Q50 20, 90 60 Q130 20, 160 100" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="3"/>
+                                    <path d="M30 100 Q60 40, 90 60 Q120 40, 150 100" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="2" 
+                                          opacity="0.6"/>
+                                    
+                                    <!-- Central peak -->
+                                    <circle cx="90" cy="60" r="3" fill="var(--primary-color)"/>
+                                    
+                                    <!-- Stable minima -->
+                                    <circle cx="50" cy="80" r="4" fill="var(--accent-color)"/>
+                                    <circle cx="130" cy="80" r="4" fill="var(--accent-color)"/>
+                                    
+                                    <!-- Ball rolling down -->
+                                    <circle cx="65" cy="75" r="3" fill="var(--secondary-color)" opacity="0.8">
+                                        <animate attributeName="cx" values="90;65;50" dur="3s" repeatCount="indefinite"/>
+                                        <animate attributeName="cy" values="60;75;80" dur="3s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <!-- Labels -->
+                                    <text x="90" y="115" text-anchor="middle" fill="var(--text-secondary)" font-size="10" font-family="JetBrains Mono">Ψ field</text>
+                                </svg>
+                                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Mexican-Hat Potential</div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);">
@@ -924,8 +1135,43 @@
                     <div style="position: relative;">
                         <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2)); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(99, 102, 241, 0.3);">
                             <div style="aspect-ratio: 16/10; background: var(--dark-bg); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(99, 102, 241, 0.2); position: relative; overflow: hidden;">
+                                <!-- Animated background field -->
                                 <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 40%, rgba(99, 102, 241, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(139, 92, 246, 0.3) 0%, transparent 50%); animation: quantumPulse 4s ease-in-out infinite;"></div>
-                                <div style="text-align: center; z-index: 1;">
+                                
+                                <!-- Interactive elements preview -->
+                                <svg width="300" height="200" viewBox="0 0 300 200" style="position: absolute; z-index: 2;">
+                                    <!-- Mexican hat potential preview -->
+                                    <path d="M50 150 Q100 80, 150 120 Q200 80, 250 150" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="2" 
+                                          opacity="0.8">
+                                        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+                                    </path>
+                                    
+                                    <!-- Soliton waves -->
+                                    <circle cx="100" cy="100" r="20" fill="var(--primary-color)" opacity="0.4">
+                                        <animate attributeName="r" values="20;25;20" dur="4s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="4s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <circle cx="200" cy="100" r="15" fill="var(--secondary-color)" opacity="0.3">
+                                        <animate attributeName="r" values="15;20;15" dur="5s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="5s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <!-- Connecting field lines -->
+                                    <path d="M100 100 Q150 80, 200 100" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="1" 
+                                          opacity="0.5" 
+                                          stroke-dasharray="4,4">
+                                        <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite"/>
+                                    </path>
+                                </svg>
+                                
+                                <div style="text-align: center; z-index: 3; position: relative;">
                                     <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem; animation: float 3s ease-in-out infinite;">Ψ</div>
                                     <div style="font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-size: 0.9rem;">Interactive Visualization</div>
                                     <div style="margin-top: 1rem;">
