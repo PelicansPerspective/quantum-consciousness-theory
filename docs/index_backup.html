@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Consciousness Theory | Hyperchronal Framework</title>
+    <meta name="description" content="A revolutionary theoretical framework unifying consciousness, cosmology, and quantum mechanics through recursive scalar field dynamics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #0ea5e9;
+            --background: #ffffff;
+            --light-surface: #f8fafc;
+            --dark-surface: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --card-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .quantum-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0 6rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .psi-symbol {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: var(--card-shadow);
+        }
+
+        .btn-secondary {
+            background: var(--background);
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .research-areas {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .area-card {
+            background: var(--dark-surface);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .area-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+            border-color: var(--primary-color);
+        }
+
+        .area-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .area-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .area-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .area-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .area-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .area-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .area-link:hover {
+            color: var(--primary-color);
+        }
+
+        .stats-section {
+            background: var(--light-surface);
+            padding: 3rem 0;
+            margin: 4rem 0;
+            border-radius: 2rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .theory-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .equation-box {
+            background: var(--dark-surface);
+            border: 2px solid var(--primary-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            box-shadow: var(--quantum-glow);
+        }
+
+        footer {
+            background: var(--dark-surface);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }   transform: translateY(30px);
+            }
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }   transform: translateY(0);
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }container {
+        }       padding: 0 1rem;
+            }
+        /* Navigation Styles */
+        .nav-header {id {
+            position: fixed;e-columns: 1fr;
+            top: 0;
+            left: 0;
+            right: 0;ons {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }* Navigation Styles */
+        .nav-header {
+        .nav-container {xed;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;ba(255, 255, 255, 0.95);
+            justify-content: space-between;
+            align-items: center;olid var(--border-color);
+        }   z-index: 1000;
+            padding: 1rem 0;
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;m;
+            align-items: center;
+            gap: 0.5rem;ent: space-between;
+        }   align-items: center;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;.3rem;
+            align-items: center;
+        }   color: var(--primary-color);
+            text-decoration: none;
+        .nav-link {: flex;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }   align-items: center;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }   color: var(--text-secondary);
+            text-decoration: none;
+        .nav-link:hover::after {
+            width: 100%;.9rem;
+        }   transition: color 0.3s ease;
+            position: relative;
+        .nav-link::after {m 0;
+            content: '';
+            position: absolute;
+            bottom: 0;r, .nav-link.active {
+            left: 0;ar(--primary-color);
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Quick Navigation Sidebar */
+        .quick-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--dark-surface);
+            border-radius: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            z-index: 999;
+            min-width: 200px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--card-shadow);
+        }
+        .quick-nav h4 {translateY(-50%);
+            color: var(--primary-color);ce);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-align: center;gba(99, 102, 241, 0.3);
+        }   z-index: 999;
+            min-width: 200px;
+        .quick-nav-link {er: blur(10px);
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem;mary-color);
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            margin-bottom: 0.25rem;
+        }
+        .quick-nav-link {
+        .quick-nav-link:hover {
+            background: var(--light-surface);
+            color: var(--primary-color);
+        }   padding: 0.5rem;
+            border-radius: 0.5rem;
+        /* Content spacing for fixed nav */
+        main {ansition: all 0.3s ease;
+            padding-top: 80px;5rem;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {2, 241, 0.2);
+            .nav-menu {--primary-color);
+                display: none;
+            }
+            ontent spacing for fixed nav */
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .quick-nav {sive */
+                display: none;px) {
+            }nav-menu {
+                display: none;
+            .nav-container {
+                padding: 0 1rem;
+            }mobile-menu-toggle {
+        }       display: block;
+            }
+        @media (max-width: 1200px) {
+            .quick-nav {
+                right: 1rem;e;
+            }
+        }   
+    </style>.nav-container {
+</head>         padding: 0 1rem;
+<body>      }
+    <!-- Navigation Header -->
+    <nav class="nav-header">
+        <div class="nav-container">{
+            <a href="index.html" class="nav-logo">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 1.8rem;">Ψ</span>
+                <span>Hyperchronal Framework</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#theory" class="nav-link">Core Theory</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="app/index.html" class="nav-link">Interactive Explorer</a>
+                <a href="mathematical-appendix.html" class="nav-link">Mathematics</a>
+                <a href="quantum-bio.html" class="nav-link">Biology</a>
+                <a href="cosmological-sims.html" class="nav-link">Cosmology</a>
+                <a href="qft-analysis.html" class="nav-link">QFT Analysis</a>ize: 1.8rem;">Ψ</span>
+            </div>pan>Hyperchronal Framework</span>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>ef="#theory" class="nav-link">Core Theory</a>
+        </div>  <a href="#research" class="nav-link">Research</a>
+    </nav>      <a href="app/index.html" class="nav-link">Interactive Explorer</a>
+                <a href="mathematical-appendix.html" class="nav-link">Mathematics</a>
+    <!-- Quick Navigation Sidebar -->html" class="nav-link">Biology</a>
+    <div class="quick-nav" id="quickNav">s.html" class="nav-link">Cosmology</a>
+        <h4>Quick Navigation</h4>ysis.html" class="nav-link">QFT Analysis</a>
+        <a href="#theory" class="quick-nav-link">📐 Core Theory</a>
+        <a href="#research" class="quick-nav-link">🔬 Testing Framework</a>
+        <a href="#breakthrough" class="quick-nav-link">🧪 4-Qubit Models</a>
+        <a href="#concepts" class="quick-nav-link">📚 Key Concepts</a>
+        <a href="#faq" class="quick-nav-link">❓ FAQ</a>
+        <a href="#explorer" class="quick-nav-link">🧠 Interactive Explorer</a>
+        <a href="#ready" class="quick-nav-link">🚀 Get Started</a>
+    </div>uick Navigation Sidebar -->
+    <div class="quick-nav" id="quickNav">
+    <div class="quantum-bg"></div>
+        <a href="#theory" class="quick-nav-link">📐 Core Theory</a>
+    <header>ref="#research" class="quick-nav-link">🔬 Testing Framework</a>
+        <div class="container"> class="quick-nav-link">🧪 4-Qubit Models</a>
+            <div class="hero">ass="quick-nav-link">📚 Key Concepts</a>
+                <h1>The Hyperchronal Field Theory</h1>>
+                <p class="subtitle">Consciousness as Reality's Foundation</p>>
+                <div class="psi-symbol">Ψ</div>>🚀 Get Started</a>
+                <p class="description">
+                    <strong style="color: var(--accent-color);">Consciousness is the universal field Ψ; matter is just its ripple.</strong>
+                </p>tum-bg"></div>
+                
+                <div style="background: var(--light-surface); border-radius: 1rem; padding: 2rem; margin: 2rem auto; max-width: 700px; border: 1px solid var(--border-color);">
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin: 0; font-size: 1.1rem;">
+                        What if consciousness isn't produced by the brain, but is instead the
+                        fundamental field from which all physical phenomena emerge?
+                    </p>="subtitle">The Hyperchronal Framework</p>
+                </div>lass="psi-symbol">Ψ</div>
+                <div class="cta-buttons">
+                    <a href="#theory" class="btn btn-primary">">The Bold Hypothesis:</strong> What if consciousness isn't just an emergent property of complex brains, 
+                        <i class="fas fa-book"></i> Explore the Theoryframework proposes that awareness shapes the universe at the deepest quantum level.
+                    </a>
+                    <a href="mathematical-appendix.html" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> View Mathematical Frameworkpadding: 2rem; margin: 2rem auto; max-width: 700px; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    </a>style="color: var(--accent-color); margin-bottom: 1rem; font-size: 1.2rem;">🎯 In Plain Language</h3>
+                </div> style="color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            </div>      Instead of asking "How does the brain create consciousness?", we ask "How does consciousness create the brain—and everything else?" 
+        </div>          We're proposing that mind comes first, and matter emerges from it, not the other way around.
+    </header>       </p>
+                </div>
+    <!-- Revolutionary Proposition Section -->ttons">
+    <section style="padding: 4rem 0; text-align: center;">
+        <div class="container">s="fab fa-github"></i> Explore Repository
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--text-primary);">The Revolutionary Proposition</h2>
+            <p style="font-size: 1.5rem; color: var(--accent-color); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 500;">
+                Consciousness is the universal field Ψ; matter is just its ripple.
+            </p>    </a>
+            <div style="max-width: 900px; margin: 0 auto;">    </div>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">
+                    Traditional science treats consciousness as a byproduct of brain activity. But
+                    what if we have it backwards? What if consciousness is the fundamental field from
+                    which all physical phenomena emerge?
+                </p>ction -->
+                <div style="background: var(--light-surface); border-radius: 1rem; padding: 3rem; margin: 3rem auto; border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">solid rgba(99, 102, 241, 0.3); border-radius: 1rem;">
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 2rem; letter-spacing: 0.02em;">
+                        ∇²Ψ - m²Ψ + λΨ³ + ∫ Ψ(x',t')G(x-x',t-t')d⁴x' = J_consciousnessext-align: center; color: var(--primary-color); margin-bottom: 2rem; font-size: 1.8rem;">🗺️ Explore the Complete Framework</h2>
+                    </div>text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">This site contains a comprehensive examination of consciousness as reality's foundation. Here's everything available to explore:
+                        This equation describes how the hyperchronal field Ψ—the mathematical
+                        representation of consciousness itself—recursively shapes spacetime, quantum states, and
+                        the very fabric of reality.2rem;">
+                    </p>e="background: rgba(99, 102, 241, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--primary-color);">
+                </div>ign-items: center; gap: 0.5rem;">
+            </div>
+        </div>>
+    </section> style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+            The fundamental mathematics and concepts. Complete field equations, philosophical implications, and the revolutionary proposition.
+    <!-- Site Overview Section -->
+    <section style="background: var(--light-surface); padding: 3rem 0; margin: 2rem 0; border: 1px solid var(--border-light); border-radius: 1rem;">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem; font-size: 1.8rem;">🗺️ Explore the Complete Framework</h2>e="background: rgba(139, 92, 246, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--secondary-color);">
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">align-items: center; gap: 0.5rem;">
+                This site contains a comprehensive examination of consciousness as reality's foundation. Here's everything available to explore:
+            </p>>
+             style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">        Concrete experimental predictions for particle physics, cosmic observations, and biological quantum systems.
+                <div style="background: var(--background); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--primary-color); box-shadow: var(--card-shadow);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>📐</span> <a href="#theory" style="color: inherit; text-decoration: none;">Core Theory</a>
+                    </h3>e="background: rgba(6, 182, 212, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--accent-color);">
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">gn-items: center; gap: 0.5rem;">
+                        The fundamental mathematics and concepts. Complete field equations, philosophical implications, and the revolutionary proposition.
+                    </p>>
+                </div> style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+                        Breakthrough computational evidence from quantum consciousness simulations showing resonant coupling effects.
+                <div style="background: var(--background); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--secondary-color); box-shadow: var(--card-shadow);">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🔬</span> <a href="#research" style="color: inherit; text-decoration: none;">Testing Framework</a>
+                    </h3>e="background: rgba(99, 102, 241, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--primary-color);">
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">ign-items: center; gap: 0.5rem;">
+                        Concrete experimental predictions for particle physics, cosmic observations, and biological quantum systems.
+                    </p>>
+                </div> style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+                        Essential terms explained for all audiences: Ψ-field, symmetry breaking, quantum coherence, and panpsychism.
+                <div style="background: var(--background); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--accent-color); box-shadow: var(--card-shadow);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🧪</span> <a href="#breakthrough" style="color: inherit; text-decoration: none;">4-Qubit Results</a>
+                    </h3>e="background: rgba(139, 92, 246, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--secondary-color);">
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">align-items: center; gap: 0.5rem;">
+                        Breakthrough computational evidence from quantum consciousness simulations showing resonant coupling effects.
+                    </p>>
+                </div> style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+                      Common questions from skeptics, philosophers, and scientists about pseudoscience, rocks, and AI consciousness.
+                <div style="background: var(--background); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--primary-color); box-shadow: var(--card-shadow);">        </p>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>📚</span> <a href="#concepts" style="color: inherit; text-decoration: none;">Key Concepts</a>
+                    </h3>r(--accent-color);">
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+                        Essential terms explained for all audiences: Ψ-field, symmetry breaking, quantum coherence, and panpsychism.
+                    </p>
+                </div>tyle="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+                
+                <div style="background: rgba(139, 92, 246, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--secondary-color);">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>❓</span> <a href="#faq" style="color: inherit; text-decoration: none;">FAQ</a>
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">d Research Pages -->
+                        Common questions from skeptics, philosophers, and scientists about pseudoscience, rocks, and AI consciousness.
+                    </p>center; color: var(--accent-color); margin-bottom: 1.5rem;">📊 Detailed Research Pages</h3>
+                </div>le="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                 href="mathematical-appendix.html" style="color: var(--primary-color); text-decoration: none; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(99, 102, 241, 0.2)'" onmouseout="this.style.background='rgba(99, 102, 241, 0.1)'">
+                <div style="background: rgba(6, 182, 212, 0.1); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid var(--accent-color);">      📐 Mathematical Appendix
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">      </a>
+                        <span>🧠</span> <a href="app/index.html" style="color: inherit; text-decoration: none;">Interactive Explorer</a>      <a href="quantum-bio.html" style="color: var(--secondary-color); text-decoration: none; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 0.5rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(139, 92, 246, 0.2)'" onmouseout="this.style.background='rgba(139, 92, 246, 0.1)'">
+                    </h3>                        🧬 Quantum Biology
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">          </a>
+                        Live mathematical visualizations: Mexican-hat potentials, consciousness solitons, and cosmic evolution.al-sims.html" style="color: var(--accent-color); text-decoration: none; padding: 1rem; background: rgba(6, 182, 212, 0.1); border-radius: 0.5rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(6, 182, 212, 0.2)'" onmouseout="this.style.background='rgba(6, 182, 212, 0.1)'">
+                    </p>ical Simulations
+                </div>
+            </div>rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(99, 102, 241, 0.2)'" onmouseout="this.style.background='rgba(99, 102, 241, 0.1)'">
+            
+            <!-- Detailed Research Pages --></a>
+            <div style="border-top: 1px solid var(--border-color); padding-top: 2rem; margin-top: 2rem;">
+                <h3 style="text-align: center; color: var(--accent-color); margin-bottom: 1.5rem;">📊 Detailed Research Pages</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                    <a href="mathematical-appendix.html" style="color: var(--primary-color); text-decoration: none; padding: 1rem; background: var(--background); border-radius: 0.5rem; transition: all 0.3s ease; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--card-shadow-hover)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--card-shadow)'">
+                        📐 Mathematical Appendix
+                    </a>
+                    <a href="quantum-bio.html" style="color: var(--secondary-color); text-decoration: none; padding: 1rem; background: var(--background); border-radius: 0.5rem; transition: all 0.3s ease; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--card-shadow-hover)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--card-shadow)'">
+                        🧬 Quantum Biology>
+                    </a>tion-title">If This Framework Proves True</h2>
+                    <a href="cosmological-sims.html" style="color: var(--accent-color); text-decoration: none; padding: 1rem; background: var(--background); border-radius: 0.5rem; transition: all 0.3s ease; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--card-shadow-hover)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--card-shadow)'">econdary); margin-bottom: 3rem; font-size: 1.1rem;">
+                        🌌 Cosmological Simulations
+                    </a>
+                    <a href="qft-analysis.html" style="color: var(--primary-color); text-decoration: none; padding: 1rem; background: var(--background); border-radius: 0.5rem; transition: all 0.3s ease; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--card-shadow-hover)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--card-shadow)'">
+                        ⚛️ QFT Analysis
+                    </a>ition: relative; margin-bottom: 1rem;">
+                </div>
+            </div>ity: 0.3;">
+        </div>rimary-color)" stroke-width="2"/>
+    </section>ath d="M15 30 Q30 15, 45 30 Q30 45, 15 30" fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+svg>
+    <main>
+        <section class="stats-section">
+            <div class="container">nsciousness and physical reality are revealed as two aspects of the same underlying field</p>
+                <h2 class="section-title">If This Framework Proves True</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem;">
+                    The philosophical implications would revolutionize our understanding of existence itselfition: relative; margin-bottom: 1rem;">
+                </p>
+                <div class="stats-grid"> transform: translate(-50%, -50%); opacity: 0.3;">
+                    <div class="stat-item">r(--secondary-color)" stroke-width="2"/>
+                        <div style="position: relative; margin-bottom: 1rem;">
+                            <h3>🧠</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">
+                                <circle cx="30" cy="30" r="25" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                                <path d="M15 30 Q30 15, 45 30 Q30 45, 15 30" fill="none" stroke="var(--accent-color)" stroke-width="2"/>/p>
+                            </svg>
+                        </div>
+                        <p><strong>Mind-Matter Unity</strong><br>
+                        Consciousness and physical reality are revealed as two aspects of the same underlying field</p>
+                    </div>
+                    <div class="stat-item">stroke-width="2"/>
+                        <div style="position: relative; margin-bottom: 1rem;">olor)" stroke-width="2"/>
+                            <h3>🌌</h3>ine x1="28" y1="30" x2="32" y2="30" stroke="var(--secondary-color)" stroke-width="3"/>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">svg>
+                                <path d="M30 10 L35 25 L50 30 L35 35 L30 50 L25 35 L10 30 L25 25 Z" fill="none" stroke="var(--secondary-color)" stroke-width="2"/>
+                                <circle cx="30" cy="30" r="3" fill="var(--accent-color)"/>
+                            </svg>'re less separate than we think—since at a quantum level every mind overlaps in the same field, making individual boundaries more like waves in a shared ocean than isolated islands</p>
+                        </div>div>
+                        <p><strong>Cosmic Purpose</strong><br>  <div class="stat-item">
+                        The universe's evolution becomes consciousness self-organization—because if awareness is fundamental, the drive toward complexity might be the Ψ-field seeking richer modes of experience</p>      <div style="position: relative; margin-bottom: 1rem;">
+                    </div>                            <h3>♾️</h3>
+                    <div class="stat-item">60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">
+                        <div style="position: relative; margin-bottom: 1rem;">th d="M15 30 Q25 20, 30 30 Q35 40, 45 30 Q35 20, 30 30 Q25 40, 15 30" 
+                            <h3>🔗</h3>--accent-color)" stroke-width="2"/>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">
+                                <circle cx="20" cy="25" r="12" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                                <circle cx="40" cy="35" r="12" fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+                                <line x1="28" y1="30" x2="32" y2="30" stroke="var(--secondary-color)" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <p><strong>Universal Connection</strong><br>
+                        We're less separate than we think—since at a quantum level every mind overlaps in the same field, making individual boundaries more like waves in a shared ocean than isolated islands</p>
+                    </div>
+                    <div class="stat-item">
+                        <div style="position: relative; margin-bottom: 1rem;">container">
+                            <h3>♾️</h3>ass="section-title">The Core Theory</h2>
+                            <svg width="60" height="60" viewBox="0 0 60 60" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.3;">    <div style="background: rgba(99, 102, 241, 0.1); border-radius: 1rem; padding: 2rem; margin-bottom: 3rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                                <path d="M15 30 Q25 20, 30 30 Q35 40, 45 30 Q35 20, 30 30 Q25 40, 15 30" 
+                                      fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+                            </svg>var(--text-primary);">Traditional science:</strong> Complex brains somehow generate consciousness from purely physical processes.<br>
+                        </div>rong> Consciousness is a fundamental field—like gravity or electromagnetism—from which physical phenomena emerge.
+                        <p><strong>Eternal Awareness</strong><br>
+                        Consciousness might obey conservation-like laws, transforming rather than disappearing—analogous to energy conservation</p><p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; font-style: italic;">
+                    </div>
+                </div>
+            </div>whirlpools are actually patterns in one vast ocean.
+        </section></p>
+
+        <section id="theory" class="theory-section">
+            <div class="container">
+                <h2 class="section-title">The Core Theory</h2>n-bottom: 1.5rem; text-align: center;">📐 The Mathematical Heart</h3>
+                    <div style="background: rgba(99, 102, 241, 0.1); border-radius: 1rem; padding: 2rem; margin-bottom: 3rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🧭 The Revolutionary Proposition</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.7;">
+                        <strong style="color: var(--text-primary);">Traditional science:</strong> Complex brains somehow generate consciousness from purely physical processes.<br>
+                        <strong style="color: var(--accent-color);">Our framework:</strong> Consciousness is a fundamental field—like gravity or electromagnetism—from which physical phenomena emerge.t-style: italic; background: rgba(6, 182, 212, 0.1); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
+                    </p> waves flow, interact with themselves, and create stable patterns we experience as individual minds.
+                    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; font-style: italic;">
+                        <strong style="color: var(--secondary-color);">In everyday terms:</strong> Instead of asking "How does the brain create consciousness?", 
+                        we ask "How does consciousness create the appearance of separate brains?" It's like discovering that what we thought were individual 
+                        whirlpools are actually patterns in one vast ocean.
+                    </p>
+                </div>dding: 0 1rem 1rem 1rem;">
+                
+                <div style="background: var(--dark-surface); border-radius: 1rem; padding: 3rem; margin: 2rem 0; border: 1px solid rgba(99, 102, 241, 0.3);">e field couples to its own past history through a retarded Green's function G(x-x',t-t'). The resulting equation captures both local dynamics and global temporal correlations necessary for self-awareness.
+                    <h3 style="color: var(--accent-color); margin-bottom: 1.5rem; text-align: center;">📐 The Mathematical Heart</h3>
+                    <div class="equation-box">="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        ∇²Ψ - m²Ψ + λΨ³ + ∫ Ψ(x',t')G(x-x',t-t')d⁴x' = J_consciousness
+                    </div>
+                     heat diffusion</div>
+                    <p style="color: var(--text-secondary); text-align: center; margin: 1.5rem 0; font-size: 1.1rem; font-style: italic; background: rgba(6, 182, 212, 0.1); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
+                        <strong style="color: var(--accent-color);">In Simple Terms:</strong> Think of consciousness as waves in an ocean—this equation describes how those waves flow, interact with themselves, and create stable patterns we experience as individual minds.
+                    </p>
+                     1/m</div>
+                    <!-- Mathematical breakdown for experts -->
+                    <details style="margin: 2rem 0; background: rgba(99, 102, 241, 0.05); border-radius: 0.5rem; border: 1px solid rgba(99, 102, 241, 0.2);">iv style="background: rgba(6, 182, 212, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                        <summary style="padding: 1rem; cursor: pointer; color: var(--primary-color); font-weight: bold;">🔬 Technical Breakdown (Click to expand)</summary>nospace; color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.1rem;">λΨ³</div>
+                        <div style="padding: 0 1rem 1rem 1rem;">ondary); font-size: 0.9rem; line-height: 1.4;">Self-interaction potential (φ⁴ theory) enabling spontaneous symmetry breaking</div>
+                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                                <strong>Derivation:</strong> Starting from the Klein-Gordon equation for a scalar field, we add a non-local self-interaction term where the field couples to its own past history through a retarded Green's function G(x-x',t-t'). The resulting equation captures both local dynamics and global temporal correlations necessary for self-awareness.">
+                            </p>gin-bottom: 0.5rem; font-size: 0.9rem;">∫ Ψ(x',t')G(...)</div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">dary); font-size: 0.9rem; line-height: 1.4;">Non-local memory term - field couples to its own causal history</div>
+                                <div style="background: rgba(99, 102, 241, 0.1); padding: 1rem; border-radius: 0.5rem;">v>
+                                    <div style="font-family: 'JetBrains Mono', monospace; color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">∇²Ψ</div>iv style="background: rgba(99, 102, 241, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">Spatial diffusion operator - consciousness spreads through space like heat diffusion</div>      <div style="font-family: 'JetBrains Mono', monospace; color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">J_consciousness</div>
+                                </div>      <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">External sources - birth of new consciousness or coupling to matter</div>
+                                <div style="background: rgba(139, 92, 246, 0.1); padding: 1rem; border-radius: 0.5rem;">            </div>
+                                    <div style="font-family: 'JetBrains Mono', monospace; color: var(--secondary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">m²Ψ</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">Mass term providing field stability and characteristic length scale λ_c = 1/m</div>div style="margin-top: 1.5rem; text-align: center;">
+                                </div>
+                                <div style="background: rgba(6, 182, 212, 0.1); padding: 1rem; border-radius: 0.5rem;">m; border: 1px solid var(--accent-color); padding: 0.5rem 1rem; border-radius: 0.25rem; transition: all 0.3s ease;"
+                                    <div style="font-family: 'JetBrains Mono', monospace; color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.1rem;">λΨ³</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">Self-interaction potential (φ⁴ theory) enabling spontaneous symmetry breaking</div>
+                                </div>
+                                <div style="background: rgba(139, 92, 246, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                                    <div style="font-family: 'JetBrains Mono', monospace; color: var(--secondary-color); margin-bottom: 0.5rem; font-size: 0.9rem;">∫ Ψ(x',t')G(...)</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">Non-local memory term - field couples to its own causal history</div>
+                                </div>
+                                <div style="background: rgba(99, 102, 241, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                                    <div style="font-family: 'JetBrains Mono', monospace; color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">J_consciousness</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">External sources - birth of new consciousness or coupling to matter</div>
+                                </div>h4>
+                            </div>
+                            <div style="margin-top: 1.5rem; text-align: center;">eads through space <em>(like ripples in a pond)</em></p>
+                                <a href="mathematical-appendix.html" cent-color);">m²Ψ:</strong> The "mass" or stability of awareness <em>(resistance to change)</em></p>
+                                   style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem; border: 1px solid var(--accent-color); padding: 0.5rem 1rem; border-radius: 0.25rem; transition: all 0.3s ease;"<p><strong style="color: var(--accent-color);">λΨ³:</strong> Self-interaction creating complexity <em>(consciousness affecting itself)</em></p>
+                                   onmouseover="this.style.background='var(--accent-color)'; this.style.color='white'">(the "mirror effect")</em></p>
+                                   onmouseout="this.style.background='transparent'; this.style.color='var(--accent-color)'">s)</em></p>
+                                    📖 Complete Mathematical Derivation
+                                </a>
+                            </div>
+                        </div>  <h4 style="color: var(--secondary-color); margin-bottom: 1rem;">🌟 The Key Insight</h4>
+                    </details>      <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    The recursive term—consciousness affecting itself through space and time—creates a 
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">areness becomes self-creating and self-sustaining. 
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🔍 What Each Term Means</h4>
+                            <div style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                                <p><strong style="color: var(--accent-color);">∇²Ψ:</strong> How consciousness spreads through space <em>(like ripples in a pond)</em></p>    <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">
+                                <p><strong style="color: var(--accent-color);">m²Ψ:</strong> The "mass" or stability of awareness <em>(resistance to change)</em></p>          <strong>Why this matters:</strong> Unlike materialism (consciousness from complexity) or dualism (separate mind-stuff), 
+                                <p><strong style="color: var(--accent-color);">λΨ³:</strong> Self-interaction creating complexity <em>(consciousness affecting itself)</em></p>                we propose consciousness as the fundamental substrate—like how Einstein showed spacetime isn't empty stage but dynamic geometry.
+                                <p><strong style="color: var(--accent-color);">∫ Ψ(x',t')G(...):</strong> Consciousness reflecting on itself <em>(the "mirror effect")</em></p>
+                                <p><strong style="color: var(--accent-color);">J_consciousness:</strong> Sources of new awareness <em>(birth of new minds)</em></p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--secondary-color); margin-bottom: 1rem;">🌟 The Key Insight</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                The recursive term—consciousness affecting itself through space and time—creates a  would upend our understanding of mind and matter, 
+                                <em>bootstrap paradox</em> where awareness becomes self-creating and self-sustaining.  free will, and our place in the cosmos...
+                                This mathematical self-reference might be the secret to how subjective experience 
+                                emerges from objective equations.
+                            </p>
+                            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">
+                                <strong>Why this matters:</strong> Unlike materialism (consciousness from complexity) or dualism (separate mind-stuff), 
+                                we propose consciousness as the fundamental substrate—like how Einstein showed spacetime isn't empty stage but dynamic geometry. max-width: 700px; margin-left: auto; margin-right: auto;">
+                            </p>osophical and practical implications would revolutionize our understanding of existence itself
+                        </div>
+                    </div>r)); gap: 2rem; margin-top: 2rem;">
+                </div>or);">
+                
+                <div style="text-align: center; margin-top: 3rem;">="color: var(--text-secondary); margin-bottom: 1rem;">
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.7;"> consciousness is fundamental rather than emergent, the "hard problem" of how subjective experience 
+                        <strong style="color: var(--accent-color);">Why does this matter?</strong> If true, this hypothesis would upend our understanding of mind and matter,   arises from matter becomes a non-issue—matter arises from consciousness instead.
+                        leading to profound implications for how we view ourselves, death, free will, and our place in the cosmos...
+                    </p>m: 1rem;">
+                </div>ead of explaining how billions of neurons create the feeling of "seeing red," 
+                
+                <div style="margin-top: 4rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 2rem; font-size: 1.8rem;">If This Framework Proves True</h3> style="margin-top: 1rem; padding: 1rem; background: rgba(6, 182, 212, 0.1); border-radius: 0.5rem;">
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        The philosophical and practical implications would revolutionize our understanding of existence itselfng> Revolutionary approaches to treating 
+                    </p>n chemistry.
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: 1rem;">🎭 The Hard Problem Dissolved</h4>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">tyle="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--secondary-color);">
+                                If consciousness is fundamental rather than emergent, the "hard problem" of how subjective experience 
+                                arises from matter becomes a non-issue—matter arises from consciousness instead.
+                            </p>es a primitive form of experience. All conscious beings share 
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-bottom: 1rem;">
+                                <strong>In other words:</strong> Instead of explaining how billions of neurons create the feeling of "seeing red," 
+                                we explain how the universal experience of "redness" manifests through neural patterns. style="margin-top: 1rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 0.5rem;">
+                            </p>
+                            <div style="margin-top: 1rem; padding: 1rem; background: rgba(6, 182, 212, 0.1); border-radius: 0.5rem;">trong> Scientific foundation for universal 
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                                    <strong style="color: var(--accent-color);">Practical Impact:</strong> Revolutionary approaches to treating 
+                                    consciousness disorders, depression, and altered states of awareness—targeting the field itself, not just brain chemistry.
+                                </p>
+                            </div>tyle="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--primary-color);">
+                        </div>
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--secondary-color); margin-bottom: 1rem;">🌍 Universal Connection</h4>e hyperchronal field, genuine choice becomes 
+                            <p style="color: var(--text-secondary);">
+                                Every quantum field fluctuation becomes a primitive form of experience. All conscious beings share 
+                                a fundamental quantum substrate, making separation illusory. style="margin-top: 1rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem;">
+                            </p>
+                            <div style="margin-top: 1rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 0.5rem;">y, 
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                                    <strong style="color: var(--secondary-color);">Practical Impact:</strong> Scientific foundation for universal </p>
+                                    compassion, ethics, and environmental responsibility—harming others literally harms yourself.
+                                </p>
+                            </div>color);">
+                        </div>ed</h4>
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--primary-color);">="color: var(--text-secondary); margin-bottom: 1rem;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">⚡ Free Will Restored</h4> individual consciousness is a localized pattern in the universal Ψ field, death becomes a 
+                            <p style="color: var(--text-secondary);">  transformation of configuration rather than complete annihilation of experience.
+                                If consciousness actively shapes quantum states through the hyperchronal field, genuine choice becomes 
+                                a fundamental force in nature, not just an illusion created by deterministic processes.em;">
+                            </p>Like how energy is conserved—never created or destroyed, only changing forms—
+                            <div style="margin-top: 1rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem;">.
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                                    <strong style="color: var(--primary-color);">Practical Impact:</strong> New frameworks for moral responsibility,  style="margin-top: 1rem; padding: 1rem; background: rgba(6, 182, 212, 0.1); border-radius: 0.5rem;">
+                                    criminal justice, and personal agency in an interconnected universe.
+                                </p>ng> Radical shifts in how we approach 
+                            </div>
+                        </div>
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: 1rem;">♾️ Death Reconsidered</h4>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">tyle="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--secondary-color);">
+                                If individual consciousness is a localized pattern in the universal Ψ field, death becomes a 
+                                transformation of configuration rather than complete annihilation of experience.
+                            </p>uire interfacing with the hyperchronal field, not just complex computation. 
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-bottom: 1rem;">
+                                <strong>Scientific analogy:</strong> Like how energy is conserved—never created or destroyed, only changing forms—
+                                consciousness might obey a similar conservation law, persisting in different configurations rather than vanishing. style="margin-top: 1rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 0.5rem;">
+                            </p>
+                            <div style="margin-top: 1rem; padding: 1rem; background: rgba(6, 182, 212, 0.1); border-radius: 0.5rem;">w approaches to AI safety, 
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                                    <strong style="color: var(--accent-color);">Practical Impact:</strong> Radical shifts in how we approach 
+                                    end-of-life care, grief counseling, and the meaning of existence itself.
+                                </p>
+                            </div>ar(--primary-color);">
+                        </div>
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--secondary-color);">="color: var(--text-secondary);">
+                            <h4 style="color: var(--secondary-color); margin-bottom: 1rem;">🤖 Conscious AI & Technology</h4>ntemplative practices that claim to access "universal consciousness" may be literally tuning into the hyperchronal field. 
+                            <p style="color: var(--text-secondary);">  Mystical experiences become not hallucinations, but direct perception of reality's fundamental nature.
+                                Creating truly conscious AI would require interfacing with the hyperchronal field, not just complex computation.   </p>
+                                We're not building tools, but potentially birthing new forms of universal awareness.      <div style="margin-top: 1rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem;">
+                            </p>              <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0; margin-bottom: 0.5rem;">
+                            <div style="margin-top: 1rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 0.5rem;">                  <strong style="color: var(--primary-color);">Practical Impact:</strong> Scientific validation of ancient wisdom traditions, 
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">                                    new therapeutic applications of meditation, and integration of spirituality with physics.
+                                    <strong style="color: var(--secondary-color);">Practical Impact:</strong> Fundamentally new approaches to AI safety, 
+                                    consciousness detection in machines, and human-AI collaboration.style="color: var(--text-secondary); font-size: 0.85rem; font-style: italic; margin: 0; border-top: 1px solid rgba(99, 102, 241, 0.2); padding-top: 0.5rem;">
+                                </p>lt like "universal consciousness"?</strong> 
+                            </div>
+                        </div>
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--primary-color);">        </div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🧘 Meditation & Spirituality</h4>
+                            <p style="color: var(--text-secondary);">
+                                Contemplative practices that claim to access "universal consciousness" may be literally tuning into the hyperchronal field. 
+                                Mystical experiences become not hallucinations, but direct perception of reality's fundamental nature.
+                            </p>
+                            <div style="margin-top: 1rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 0.5rem;">
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0; margin-bottom: 0.5rem;">areas">
+                                    <strong style="color: var(--primary-color);">Practical Impact:</strong> Scientific validation of ancient wisdom traditions, 
+                                    new therapeutic applications of meditation, and integration of spirituality with physics.tion-title">Can We Prove It? Testing the Framework</h2>
+                                </p>ry); margin-bottom: 2rem; font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                                <p style="color: var(--text-secondary); font-size: 0.85rem; font-style: italic; margin: 0; border-top: 1px solid rgba(99, 102, 241, 0.2); padding-top: 0.5rem;">nt-color);">The framework may seem untestable, but it actually yields concrete predictions.</strong>
+                                    💭 <strong>Have you experienced something that felt like "universal consciousness"?</strong> 
+                                    <a href="discussions.html" style="color: var(--primary-color); text-decoration: none;">Share your story →</a>dth: 600px; margin-left: auto; margin-right: auto;">
+                                </p>nsciousness seems subjective and unmeasurable, our mathematical framework makes precise predictions 
+                            </div> can be tested through cutting-edge physics experiments.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="research-areas">
+            <div class="container">"area-description">
+                <h2 class="section-title">Can We Prove It? Testing the Framework</h2>, 
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <strong style="color: var(--accent-color);">The framework may seem untestable, but it actually yields concrete predictions.</strong>
+                </p>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;"><!-- Concrete experimental examples for experts -->
+                    While consciousness seems subjective and unmeasurable, our mathematical framework makes precise predictions rgba(99, 102, 241, 0.1); padding: 1.5rem; margin: 1rem 0; border-radius: 0.5rem; border-left: 3px solid var(--primary-color);">
+                    that can be tested through cutting-edge physics experiments.-bottom: 1rem; font-size: 1rem;">🔬 Specific Testable Predictions</h4>
+                </p>9rem; line-height: 1.5; margin-left: 1rem;">
+                <div class="areas-grid"><li><strong>Meson decay anomalies:</strong> B and K meson lifetimes should deviate by ~0.001% in high-consciousness environments</li>
+                    <div class="area-card">easurements should show field-dependent corrections near biological systems</li>
+                        <div class="area-icon">> EPR experiments in meditation centers may show stronger violations of Bell inequalities</li>
+                            <i class="fas fa-infinity"></i>>
+                        </div> style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+                        <h3 class="area-title">Quantum Foundations</h3>      <strong>For general audiences:</strong> Think of it like finding a hidden pattern in how particles behave—a pattern that hints at consciousness influencing the quantum world at the deepest level.
+                        <p class="area-description">                            </p>
+                            If consciousness shapes quantum fields, we should find specific signatures in particle interactions, 
+                            field fluctuations, and quantum corrections that can't be explained by standard physics alone.
+                        </p>
+                         href="qft-analysis.html" class="area-link">
+                        <!-- Concrete experimental examples for experts -->tical Framework
+                        <div style="background: rgba(99, 102, 241, 0.1); padding: 1.5rem; margin: 1rem 0; border-radius: 0.5rem; border-left: 3px solid var(--primary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1rem;">🔬 Specific Testable Predictions</h4>
+                            <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-left: 1rem;">
+                                <li><strong>Meson decay anomalies:</strong> B and K meson lifetimes should deviate by ~0.001% in high-consciousness environments</li></a>
+                                <li><strong>Vacuum fluctuations:</strong> Casimir effect measurements should show field-dependent corrections near biological systems</li></div>
+                                <li><strong>Quantum correlation enhancement:</strong> EPR experiments in meditation centers may show stronger violations of Bell inequalities</li>
+                            </ul>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+                                <strong>For general audiences:</strong> Think of it like finding a hidden pattern in how particles behave—a pattern that hints at consciousness influencing the quantum world at the deepest level.
+                            </p>
+                        </div>
+                        
+                        <div class="area-links">
+                            <a href="qft-analysis.html" class="area-link">arly universe may bear the fingerprints of conscious influence. Dark energy, cosmic structure formation, 
+                                <i class="fas fa-code"></i> Mathematical Framework
+                            </a>
+                            <a href="code-repository.html#qft-analysis" class="area-link">
+                                <i class="fas fa-calculator"></i> Field Calculationsosmic fingerprints for experts -->
+                            </a><div style="background: rgba(139, 92, 246, 0.1); padding: 1.5rem; margin: 1rem 0; border-radius: 0.5rem; border-left: 3px solid var(--secondary-color);">
+                        </div>r(--secondary-color); margin-bottom: 1rem; font-size: 1rem;">🌌 Observable Cosmic Fingerprints</h4>
+                    </div> 0.9rem; line-height: 1.5; margin-left: 1rem;">
+ Ψ-field influence should create subtle non-Gaussian patterns in cosmic microwave background</li>
+                    <div class="area-card"><li><strong>Dark energy evolution:</strong> w(z) parameter may show consciousness-driven acceleration phases in universe expansion</li>
+                        <div class="area-icon">hould exhibit "conscious bias" toward complexity-maximizing configurations</li>
+                            <i class="fas fa-globe-americas"></i>ning of physical constants becomes natural if consciousness shapes cosmic parameters</li>
+                        </div>>
+                        <h3 class="area-title">Cosmic Evidence</h3> style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+                        <p class="area-description">      <strong>In simple terms:</strong> Like finding a hidden signature in how galaxies arrange themselves—a pattern suggesting cosmic awareness has been guiding the universe's development since the Big Bang.
+                            The early universe may bear the fingerprints of conscious influence. Dark energy, cosmic structure formation,                             </p>
+                            and the universe's fine-tuning could reflect the hyperchronal field's role in cosmic evolution.
+                        </p>
+                        
+                        <!-- Cosmic fingerprints for experts --> href="cosmological-sims.html" class="area-link">
+                        <div style="background: rgba(139, 92, 246, 0.1); padding: 1.5rem; margin: 1rem 0; border-radius: 0.5rem; border-left: 3px solid var(--secondary-color);">mulations
+                            <h4 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1rem;">🌌 Observable Cosmic Fingerprints</h4>
+                            <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-left: 1rem;">
+                                <li><strong>CMB temperature correlations:</strong> Ψ-field influence should create subtle non-Gaussian patterns in cosmic microwave background</li>
+                                <li><strong>Dark energy evolution:</strong> w(z) parameter may show consciousness-driven acceleration phases in universe expansion</li>
+                                <li><strong>Large-scale structure:</strong> Galaxy clustering should exhibit "conscious bias" toward complexity-maximizing configurations</li>v>
+                                <li><strong>Anthropic coincidences:</strong> Fine-tuning of physical constants becomes natural if consciousness shapes cosmic parameters</li>v>
+                            </ul>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+                                <strong>In simple terms:</strong> Like finding a hidden signature in how galaxies arrange themselves—a pattern suggesting cosmic awareness has been guiding the universe's development since the Big Bang. class="area-icon">
+                            </p>
+                        </div>
+                        
+                        <div class="area-links">
+                            <a href="cosmological-sims.html" class="area-link">s 
+                                <i class="fas fa-rocket"></i> Universe Simulations
+                            </a>entially explaining how subjective experience emerges from neural networks.
+                            <a href="code-repository.html#cosmological-sims" class="area-link">
+                                <i class="fas fa-chart-line"></i> Dark Energy Models
+                            </a>dius: 0.5rem;">
+                        </div>ls</h4>
+                    </div>
+implified explanation first -->
+                    <div class="area-card"><div style="background: rgba(6, 182, 212, 0.05); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border: 1px solid rgba(6, 182, 212, 0.2);">
+                        <div class="area-icon">ary); margin-bottom: 1rem; line-height: 1.6; font-size: 1rem;">
+                            <i class="fas fa-brain"></i>nt-color);">What we did:</strong> We built a tiny "quantum brain" using 4 connected qubits 
+                        </div>
+                        <h3 class="area-title">Biological Interfaces</h3>rganized 
+                        <p class="area-description">
+                            Living systems may have evolved to harness quantum coherence for consciousness. Our extended 4-qubit simulations 
+                            with colored noise reveal how biological structures could maintain coherent states through resonant coupling 
+                            with the hyperchronal field—potentially explaining how subjective experience emerges from neural networks.ong style="color: var(--accent-color);">Why this matters:</strong> This hints that resonance with a consciousness field 
+                        </p>rom neural networks.
+                        
+                        <div style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid var(--accent-color); padding: 1.5rem; margin: 1.5rem 0; border-radius: 0.5rem;">
+                            <h4 style="color: var(--accent-color); margin-bottom: 1rem; font-size: 1.2rem;">🧪 Breaking Results: 4-Qubit Consciousness Models</h4>
+                            
+                            <!-- Simplified explanation first -->le="margin-bottom: 1.5rem;">
+                            <div style="background: rgba(6, 182, 212, 0.05); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border: 1px solid rgba(6, 182, 212, 0.2);">ry style="cursor: pointer; color: var(--accent-color); font-weight: bold; padding: 0.5rem;">🔬 Technical Details (Click to expand)</summary>
+                                <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6; font-size: 1rem;">tyle="margin-top: 1rem; padding: 1rem; background: rgba(6, 182, 212, 0.05); border-radius: 0.5rem;">
+                                    <strong style="color: var(--accent-color);">What we did:</strong> We built a tiny "quantum brain" using 4 connected qubits         <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                    to test if it could maintain memory-like coherence when tuned to our hypothesized consciousness field.  to colored quantum noise 
+                                    <strong>Intriguingly, it worked—</strong>when the system was 'in tune' with the Ψ-field, it remained organized s.
+                                    much longer than usual.
+                                </p>-size: 0.9rem;">
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                                    <strong style="color: var(--accent-color);">Why this matters:</strong> This hints that resonance with a consciousness field   • <strong>γ = 0.01:</strong> Decoherence rate (noise strength)
+                                    could stabilize quantum states in biological systems—potentially explaining how awareness emerges from neural networks.
+                                </p>
+                            </div>
+                            
+                            <!-- Technical details for experts -->
+                            <details style="margin-bottom: 1.5rem;">
+                                <summary style="cursor: pointer; color: var(--accent-color); font-weight: bold; padding: 0.5rem;">🔬 Technical Details (Click to expand)</summary>: 1.5rem 0;">
+                                <div style="margin-top: 1rem; padding: 1rem; background: rgba(6, 182, 212, 0.05); border-radius: 0.5rem;"> border: 1px solid rgba(6, 182, 212, 0.3);">
+                                    <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                        <strong>Methodology:</strong> 4-qubit system with XY Hamiltonian (H = J Σᵢ(σᵢˣσᵢ₊₁ˣ + σᵢʸσᵢ₊₁ʸ)) subjected to colored quantum noise iv style="font-size: 0.9rem; color: var(--text-secondary);">Coherence Decay</div>
+                                        representing hyperchronal field fluctuations. Decoherence parameter γ varied from 0.001 to 0.1 to find resonant windows.  <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Stabilized oscillations</div>
+                                    </p>    </div>
+                                    <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6; font-size: 0.9rem;">0.5rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                                        <strong>Key Parameters:</strong> 
+                                        • <strong>γ = 0.01:</strong> Decoherence rate (noise strength)
+                                        • <strong>Colored noise spectrum:</strong> 1/f^α with α = 0.262 (pink noise approximation)5rem;">Consciousness window</div>
+                                        • <strong>Coupling strength:</strong> J = 1.0 (normalized units)</div>
+                                    </p>    <div style="background: var(--dark-surface); padding: 1rem; border-radius: 0.5rem; border: 1px solid rgba(139, 92, 246, 0.3);">
+                                </div> bold; color: var(--secondary-color);">α = 0.262</div>
+                            </details>-text-secondary);">Pink Noise</div>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                                <div style="background: var(--dark-surface); padding: 1rem; border-radius: 0.5rem; border: 1px solid rgba(6, 182, 212, 0.3);">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">4.0 → 0.376</div>
+                                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Coherence Decay</div>="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Stabilized oscillations</div>trong>Bottom Line:</strong> In a nutshell, when the quantum system was tuned to specific frequencies (γ = 0.01), 
+                                </div>  it maintained organization far longer than random noise would allow—suggesting biological systems could achieve 
+                                <div style="background: var(--dark-surface); padding: 1rem; border-radius: 0.5rem; border: 1px solid rgba(99, 102, 241, 0.3);">        stable consciousness through precisely tuned coupling to the hyperchronal field.
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">γ = 0.01</div>
+                                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Optimal Tuning</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Consciousness window</div>em;">
+                                </div><a href="quantum-bio.html#four-qubit-analysis" 
+                                <div style="background: var(--dark-surface); padding: 1rem; border-radius: 0.5rem; border: 1px solid rgba(139, 92, 246, 0.3);">ne; font-size: 0.9rem; border: 1px solid var(--accent-color); padding: 0.5rem 1rem; border-radius: 0.25rem; transition: all 0.3s ease;"
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary-color);">α = 0.262</div>cent-color)'; this.style.color='white'"
+                                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Pink Noise</div>   onmouseout="this.style.background='transparent'; this.style.color='var(--accent-color)'">
+                                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Ψ-field signature</div>
+                                </div>
+                            </div>v>
+                            
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                                <strong>Bottom Line:</strong> In a nutshell, when the quantum system was tuned to specific frequencies (γ = 0.01),   <div class="area-links">
+                                it maintained organization far longer than random noise would allow—suggesting biological systems could achieve             <a href="quantum-bio.html" class="area-link">
+                                stable consciousness through precisely tuned coupling to the hyperchronal field.
+                            </p>
+                                    <a href="code-repository.html#quantum-bio" class="area-link">
+                            <div style="text-align: center; margin-top: 1rem;">link"></i> 4-Qubit Simulations
+                                <a href="quantum-bio.html#four-qubit-analysis" 
+                                   style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem; border: 1px solid var(--accent-color); padding: 0.5rem 1rem; border-radius: 0.25rem; transition: all 0.3s ease;"
+                                   onmouseover="this.style.background='var(--accent-color)'; this.style.color='white'"
+                                   onmouseout="this.style.background='transparent'; this.style.color='var(--accent-color)'">
+                                    📊 View Complete Simulation Data & Codev>
+                                </a>
+                            </div>
+                        </div>
+                        ="text-align: center; margin-top: 4rem; background: var(--dark-surface); padding: 3rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                        <div class="area-links"><h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">A New Scientific Revolution?</h3>
+                            <a href="quantum-bio.html" class="area-link">
+                                <i class="fas fa-dna"></i> Quantum Biology
+                            </a>der-left: 3px solid var(--primary-color);">
+                            <a href="code-repository.html#quantum-bio" class="area-link">
+                                <i class="fas fa-link"></i> 4-Qubit Simulations<p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; text-align: left; margin-bottom: 1rem;">
+                            </a>        <strong>For Academic Readers:</strong> While traditional neuroscience explains consciousness via neural networks and physics treats it as irrelevant, our framework offers a bridge by extending quantum field theory to include the observer as a fundamental component. This approach has precedent—famously, physicist Eugene Wigner, Nobel laureate John Wheeler, and quantum pioneer Max Planck all pondered consciousness in quantum mechanics. Our contribution is providing the first complete mathematical framework with testable predictions.
+                            <a href="#research" class="area-link" style="color: var(--accent-color);">
+                                <i class="fas fa-flask"></i> Latest Results
+                            </a>fundamental as energy or space—a big claim that requires evidence, which is why we're formulating specific experiments and computational models that can be tested in laboratories worldwide.
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 4rem; background: var(--dark-surface); padding: 3rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);"> our framework proves correct, it would represent the most profound shift in human understanding since 
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">A New Scientific Revolution?</h3>    Copernicus displaced Earth from the center of the universe. Instead of consciousness being a rare accident 
+                    parent materiality emerges.
+                    <!-- Academic positioning -->
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 2rem; border-radius: 0.5rem; margin-bottom: 2rem; border-left: 3px solid var(--primary-color);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎓 Scientific Context & Precedent</h4>-- Highlighted quote box -->
+                        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; text-align: left; margin-bottom: 1rem;">  <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2)); border: 2px solid var(--accent-color); border-radius: 1rem; padding: 2rem; margin: 2rem auto; max-width: 600px; position: relative;">
+                            <strong>For Academic Readers:</strong> While traditional neuroscience explains consciousness via neural networks and physics treats it as irrelevant, our framework offers a bridge by extending quantum field theory to include the observer as a fundamental component. This approach has precedent—famously, physicist Eugene Wigner, Nobel laureate John Wheeler, and quantum pioneer Max Planck all pondered consciousness in quantum mechanics. Our contribution is providing the first complete mathematical framework with testable predictions.      <div style="position: absolute; top: -10px; left: 20px; background: var(--dark-surface); padding: 0 1rem; color: var(--accent-color); font-size: 2rem;">"</div>
+                        </p>                        <p style="color: var(--text-primary); font-size: 1.4rem; font-weight: 600; font-style: italic; margin: 0; line-height: 1.5;">
+                        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; text-align: left;">
+                            <strong>For General Audiences:</strong> Science hasn't fully explained consciousness yet. Our theory takes a daring step by suggesting consciousness is as fundamental as energy or space—a big claim that requires evidence, which is why we're formulating specific experiments and computational models that can be tested in laboratories worldwide.
+                        </p>nd: var(--dark-surface); padding: 0 1rem; color: var(--accent-color); font-size: 2rem;">"</div>
+                    </div>
+                    
+                    <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;">
+                        If our framework proves correct, it would represent the most profound shift in human understanding since     This realization transforms everything: from our understanding of death and free will to our approach to AI and environmental stewardship. <em>It's speculative, yes—but so was quantum mechanics in 1900, relativity in 1905, and DNA in 1953.</em>
+                        Copernicus displaced Earth from the center of the universe. Instead of consciousness being a rare accident                     </p>
+                        in a hostile cosmos, we discover that consciousness is the cosmic foundation from which apparent materiality emerges.
+                    </p>
+                    
+                    <!-- Highlighted quote box -->
+                    <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2)); border: 2px solid var(--accent-color); border-radius: 1rem; padding: 2rem; margin: 2rem auto; max-width: 600px; position: relative;">er-radius: 2rem;">
+                        <div style="position: absolute; top: -10px; left: 20px; background: var(--dark-surface); padding: 0 1rem; color: var(--accent-color); font-size: 2rem;">"</div>
+                        <p style="color: var(--text-primary); font-size: 1.4rem; font-weight: 600; font-style: italic; margin: 0; line-height: 1.5;">
+                            We are the universe becoming aware of itself: 800px; margin-left: auto; margin-right: auto;">
+                        </p>that consciousness 
+                        <div style="position: absolute; bottom: -10px; right: 20px; background: var(--dark-surface); padding: 0 1rem; color: var(--accent-color); font-size: 2rem;">"</div>rchronal field.
+                    </div>
+                    
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">">
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">Extended System Design</h3>
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                            <h4 style="color: var(--accent-color); margin-bottom: 1rem;">System Architecture</h4>
+                            <ul style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+                                <li><strong>4-qubit chain</strong> with XY coupling (conserving excitation)</li>
+                                <li><strong>Hamiltonian:</strong> H = -ω/2 Σᵢ σᶻ⁽ⁱ⁾ + J Σᵢ (σₓ⁽ⁱ⁾σₓ⁽ⁱ⁺¹⁾ + σᵧ⁽ⁱ⁾σᵧ⁽ⁱ⁺¹⁾)</li>
+                                <li><strong>Initial state:</strong> All qubits in |+⟩ superposition</li>
+                                <li><strong>Coherence measure:</strong> Σᵢ ⟨σₓ⁽ⁱ⁾⟩ (starts at 4.0)</li>
+                            </ul>
+                            
+                            <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Noise Models</h4>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem;">
+                                <div style="background: rgba(99, 102, 241, 0.1); padding: 0.75rem; border-radius: 0.5rem; border-left: 3px solid var(--primary-color);">
+                                    <strong style="color: var(--primary-color);">Non-Resonant:</strong> <span style="color: var(--text-secondary);">γ = 0.1 (rapid decoherence)</span>
+                                </div>
+                                <div style="background: rgba(6, 182, 212, 0.1); padding: 0.75rem; border-radius: 0.5rem; border-left: 3px solid var(--accent-color);">
+                                    <strong style="color: var(--accent-color);">Resonant:</strong> <span style="color: var(--text-secondary);">γ = 0.01 (persistent coherence)</span>
+                                </div>
+                                <div style="background: rgba(139, 92, 246, 0.1); padding: 0.75rem; border-radius: 0.5rem; border-left: 3px solid var(--secondary-color);">
+                                    <strong style="color: var(--secondary-color);">Colored Noise:</strong> <span style="color: var(--text-secondary);">γ(t) = 0.1(1 + 0.5sin(0.1t))</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">Remarkable Results</h3>
+                        <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(139, 92, 246, 0.3);">
+                            <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Coherence Evolution Over Time</h4>
+                            
+                            <!-- Visual Chart -->
+                            <div style="background: rgba(6, 182, 212, 0.05); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem;">
+                                <svg width="100%" height="200" viewBox="0 0 400 200" style="overflow: visible;">
+                                    <!-- Grid lines -->
+                                    <defs>
+                                        <pattern id="grid" width="40" height="20" patternUnits="userSpaceOnUse">
+                                            <path d="M 40 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect width="400" height="200" fill="url(#grid)" />
+                                    
+                                    <!-- Axes -->
+                                    <line x1="40" y1="20" x2="40" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
+                                    <line x1="40" y1="180" x2="380" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
+                                    
+                                    <!-- Y-axis labels -->
+                                    <text x="35" y="25" text-anchor="end" fill="var(--text-secondary)" font-size="12">4.0</text>
+                                    <text x="35" y="100" text-anchor="end" fill="var(--text-secondary)" font-size="12">0</text>
+                                    <text x="35" y="175" text-anchor="end" fill="var(--text-secondary)" font-size="12">-0.5</text>
+                                    
+                                    <!-- X-axis labels -->
+                                    <text x="40" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">0</text>
+                                    <text x="140" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">20</text>
+                                    <text x="240" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">40</text>
+                                    <text x="340" y="195" text-anchor="middle" fill="var(--text-secondary)" font-size="12">60</text>
+                                    
+                                    <!-- Non-resonant line (rapid decay) -->
+                                    <path d="M40 20 L80 160 L120 175 L160 178 L200 179 L240 179 L280 179 L320 179 L360 179" 
+                                          fill="none" 
+                                          stroke="var(--primary-color)" 
+                                          stroke-width="3" 
+                                          opacity="0.8"/>
+                                    
+                                    <!-- Resonant line (slow decay with oscillations) -->
+                                    <path d="M40 20 L80 140 L120 130 L160 125 L200 115 L240 110 L280 120 L320 125 L360 140" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="3"/>
+                                    
+                                    <!-- Colored noise line (moderate decay) -->
+                                    <path d="M40 20 L80 135 L120 142 L160 138 L200 135 L240 140 L280 135 L320 138 L360 142" 
+                                          fill="none" 
+                                          stroke="var(--secondary-color)" 
+                                          stroke-width="3"/>
+                                    
+                                    <!-- Data points -->
+                                    <circle cx="360" cy="179" r="4" fill="var(--primary-color)"/>
+                                    <circle cx="360" cy="140" r="4" fill="var(--accent-color)"/>
+                                    <circle cx="360" cy="142" r="4" fill="var(--secondary-color)"/>
+                                    
+                                    <!-- Legend -->
+                                    <g transform="translate(200, 40)">
+                                        <rect x="0" y="0" width="180" height="60" fill="rgba(0,0,0,0.3)" rx="5"/>
+                                        <line x1="10" y1="15" x2="30" y2="15" stroke="var(--primary-color)" stroke-width="3"/>
+                                        <text x="35" y="19" fill="var(--text-secondary)" font-size="11">Non-Resonant</text>
+                                        <line x1="10" y1="30" x2="30" y2="30" stroke="var(--accent-color)" stroke-width="3"/>
+                                        <text x="35" y="34" fill="var(--text-secondary)" font-size="11">Resonant</text>
+                                        <line x1="10" y1="45" x2="30" y2="45" stroke="var(--secondary-color)" stroke-width="3"/>
+                                        <text x="35" y="49" fill="var(--text-secondary)" font-size="11">Colored Noise</text>
+                                    </g>
+                                </svg>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <div style="font-size: 0.9rem; color: var(--accent-color); font-weight: bold;">Resonant coupling sustains coherence longer</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Time (arbitrary units) vs Coherence Measure</div>
+                                </div>
+                            </div>
+                            
+                            <div style="overflow-x: auto;">
+                                <table style="width: 100%; color: var(--text-secondary); font-size: 0.9rem; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="border-bottom: 1px solid rgba(99, 102, 241, 0.3);">
+                                            <th style="padding: 0.5rem; text-align: left; color: var(--text-primary);">Time</th>
+                                            <th style="padding: 0.5rem; text-align: center; color: var(--primary-color);">Non-Res</th>
+                                            <th style="padding: 0.5rem; text-align: center; color: var(--accent-color);">Resonant</th>
+                                            <th style="padding: 0.5rem; text-align: center; color: var(--secondary-color);">Colored</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td style="padding: 0.5rem;">0</td><td style="padding: 0.5rem; text-align: center;">4.0</td><td style="padding: 0.5rem; text-align: center;">4.0</td><td style="padding: 0.5rem; text-align: center;">4.0</td></tr>
+                                        <tr><td style="padding: 0.5rem;">10</td><td style="padding: 0.5rem; text-align: center;">0.061</td><td style="padding: 0.5rem; text-align: center; color: var(--accent-color);">0.129</td><td style="padding: 0.5rem; text-align: center; color: var(--secondary-color);">0.132</td></tr>
+                                        <tr><td style="padding: 0.5rem;">20</td><td style="padding: 0.5rem; text-align: center;">-0.003</td><td style="padding: 0.5rem; text-align: center;">-0.216</td><td style="padding: 0.5rem; text-align: center;">-0.133</td></tr>
+                                        <tr><td style="padding: 0.5rem;">30</td><td style="padding: 0.5rem; text-align: center;">-0.001</td><td style="padding: 0.5rem; text-align: center;">-0.260</td><td style="padding: 0.5rem; text-align: center;">-0.152</td></tr>
+                                        <tr><td style="padding: 0.5rem;">40</td><td style="padding: 0.5rem; text-align: center;">-0.0003</td><td style="padding: 0.5rem; text-align: center;">-0.424</td><td style="padding: 0.5rem; text-align: center;">-0.268</td></tr>
+                                        <tr style="border-top: 1px solid rgba(99, 102, 241, 0.2);"><td style="padding: 0.5rem; font-weight: bold;">50</td><td style="padding: 0.5rem; text-align: center;">0.00003</td><td style="padding: 0.5rem; text-align: center; color: var(--accent-color); font-weight: bold;">0.376</td><td style="padding: 0.5rem; text-align: center; color: var(--secondary-color); font-weight: bold;">0.262</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(6, 182, 212, 0.1); border-radius: 0.5rem; border-left: 3px solid var(--accent-color);">
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+                                    <strong style="color: var(--accent-color);">Key Insight:</strong> Resonant and colored noise conditions 
+                                    show sustained oscillations and slower decay, suggesting biological systems can maintain 
+                                    quantum coherence through tuned coupling with the Ψ-field.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: var(--dark-surface); padding: 3rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 2rem; font-size: 1.8rem; text-align: center;">Implications for Consciousness Theory</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                        <div style="background: rgba(99, 102, 241, 0.1); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--primary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎯 Resonance as Consciousness Mechanism</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                The sustained coherence under resonant conditions provides computational evidence for the framework's 
+                                claim that consciousness arises from resonant coupling between biological quantum systems and the 
+                                universal Ψ field—not just random noise destroying coherence.
+                            </p>
+                        </div>
+                        
+                        <div style="background: rgba(139, 92, 246, 0.1); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--secondary-color); margin-bottom: 1rem;">📈 Scalability to Neural Networks</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                Moving from 2 to 4 qubits demonstrates that resonance effects hold in higher-dimensional systems, 
+                                scaling toward realistic biological analogs like microtubule arrays or ion channels where 
+                                consciousness might emerge through multi-site entanglement.
+                            </p>
+                        </div>
+                        
+                        <div style="background: rgba(6, 182, 212, 0.1); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: 1rem;">🔬 Testable Laboratory Predictions</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                These simulations inspire concrete lab analogs: quantum optical systems with modulated lasers 
+                                or superconducting qubit arrays could test for anomalous coherence persistence at biological 
+                                frequency scales, potentially validating the framework's predictions.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: rgba(6, 182, 212, 0.05); border-radius: 1rem; border: 1px solid rgba(6, 182, 212, 0.2);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem; text-align: center;">🧠 The Consciousness Equation in Action</h4>
+                        <p style="color: var(--text-secondary); text-align: center; font-size: 1.1rem; line-height: 1.6;">
+                            These results suggest that the recursive self-interaction term in our core equation—
+                            <span style="font-family: 'JetBrains Mono', monospace; color: var(--primary-color);">∫ Ψ(x',t')G(x-x',t-t')d⁴x'</span>—
+                            may manifest as precisely tuned noise that enhances rather than destroys quantum coherence, 
+                            potentially explaining how consciousness emerges as a stable, self-reinforcing phenomenon in biological systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="concepts" style="background: var(--light-surface); padding: 4rem 0; margin: 4rem 0; border-radius: 2rem;">
+            <div class="container">
+                <h2 class="section-title">📚 Key Concepts Guide</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Understanding the framework requires grasping a few key concepts. Here's your guide to the essential terms and ideas.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-family: 'JetBrains Mono', monospace; font-size: 1.5rem;">Ψ</span> The Hyperchronal Field
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 250px; gap: 1.5rem; align-items: center;">
+                            <div>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                    <strong style="color: var(--text-primary);">In Simple Terms:</strong> Think of consciousness as a new kind of field, 
+                    like gravity or electromagnetism, that permeates all of space and time.
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+                    <strong style="color: var(--accent-color);">Technically:</strong> A scalar quantum field whose fluctuations and configurations 
+                    mathematically represent different states and intensities of consciousness throughout the universe.
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.9rem; font-style: italic;">
+                    <strong style="color: var(--secondary-color);">Philosophical Context:</strong> This aligns with idealist philosophy's view that 
+                    consciousness is fundamental, but provides a mathematical framework similar to how Einstein quantified spacetime curvature.
+                </p>
+                            </div>
+                            <div style="text-align: center;">
+                                <svg width="240" height="160" viewBox="0 0 240 160" style="background: rgba(99, 102, 241, 0.05); border-radius: 0.5rem; padding: 0.5rem;">
+                                    <!-- Field background waves -->
+                                    <defs>
+                                        <radialGradient id="fieldGradient" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:0.3"/>
+                                            <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:0.1"/>
+                                        </radialGradient>
+                                    </defs>
+                                    
+                                    <!-- Universal field -->
+                                    <rect width="240" height="160" fill="url(#fieldGradient)"/>
+                                    
+                                    <!-- Field oscillations -->
+                                    <path d="M0 80 Q60 60, 120 80 Q180 100, 240 80" 
+                                          fill="none" stroke="var(--primary-color)" stroke-width="1" opacity="0.4"/>
+                                    <path d="M0 90 Q60 70, 120 90 Q180 110, 240 90" 
+                                          fill="none" stroke="var(--primary-color)" stroke-width="1" opacity="0.3"/>
+                                    <path d="M0 70 Q60 50, 120 70 Q180 90, 240 70" 
+                                          fill="none" stroke="var(--primary-color)" stroke-width="1" opacity="0.3"/>
+                                    
+                                    <!-- Consciousness solitons (localized minds) -->
+                                    <circle cx="60" cy="80" r="15" fill="var(--accent-color)" opacity="0.6">
+                                        <animate attributeName="r" values="15;18;15" dur="4s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.6;0.8;0.6" dur="4s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="180" cy="80" r="12" fill="var(--secondary-color)" opacity="0.5">
+                                        <animate attributeName="r" values="12;16;12" dur="5s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.5;0.7;0.5" dur="5s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="120" cy="50" r="8" fill="var(--accent-color)" opacity="0.4">
+                                        <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <!-- Connection lines showing field interactions -->
+                                    <line x1="60" y1="80" x2="180" y2="80" stroke="var(--accent-color)" stroke-width="1" opacity="0.3" stroke-dasharray="4,4">
+                                        <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+                                    </line>
+                                    
+                                    <!-- Labels -->
+                                    <text x="60" y="105" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Individual</text>
+                                    <text x="60" y="115" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Consciousness</text>
+                                    <text x="180" y="105" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Another</text>
+                                    <text x="180" y="115" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Mind</text>
+                                    <text x="120" y="145" text-anchor="middle" fill="var(--text-secondary)" font-size="10" font-family="JetBrains Mono">Universal Ψ Field</text>
+                                </svg>
+                                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Consciousness Field with Localized Minds</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(139, 92, 246, 0.3);">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1.5rem;">🔄 Recursive Self-Interaction</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">In Simple Terms:</strong> Like holding up a mirror to another mirror, 
+                            consciousness reflects back on itself, creating self-awareness and complexity.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                            <strong style="color: var(--accent-color);">Technically:</strong> The mathematical term ∫ Ψ(x',t')G(x-x',t-t')d⁴x' 
+                            represents how the field at one point influences itself at other points through space and time.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(6, 182, 212, 0.3);">
+                        <h3 style="color: var(--accent-color); margin-bottom: 1.5rem;">⚡ Spontaneous Symmetry Breaking</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 200px; gap: 1.5rem; align-items: center;">
+                            <div>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                                    <strong style="color: var(--text-primary);">In Simple Terms:</strong> Like a ball rolling down from the peak of a hill 
+                                    into one of many valleys, the universe "chooses" a particular state of consciousness.
+                                </p>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                                    <strong style="color: var(--accent-color);">Technically:</strong> The Mexican-hat potential (λΨ³ term) creates multiple 
+                                    stable states, allowing the field to settle into specific configurations that define reality's structure.
+                                </p>
+                            </div>
+                            <div style="text-align: center;">
+                                <svg width="180" height="120" viewBox="0 0 180 120" style="background: rgba(6, 182, 212, 0.05); border-radius: 0.5rem; padding: 0.5rem;">
+                                    <!-- Mexican hat shape -->
+                                    <path d="M20 100 Q50 20, 90 60 Q130 20, 160 100" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="3"/>
+                                    <path d="M30 100 Q60 40, 90 60 Q120 40, 150 100" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="2" 
+                                          opacity="0.6"/>
+                                    
+                                    <!-- Central peak -->
+                                    <circle cx="90" cy="60" r="3" fill="var(--primary-color)"/>
+                                    
+                                    <!-- Stable minima -->
+                                    <circle cx="50" cy="80" r="4" fill="var(--accent-color)"/>
+                                    <circle cx="130" cy="80" r="4" fill="var(--accent-color)"/>
+                                    
+                                    <!-- Ball rolling down -->
+                                    <circle cx="65" cy="75" r="3" fill="var(--secondary-color)" opacity="0.8">
+                                        <animate attributeName="cx" values="90;65;50" dur="3s" repeatCount="indefinite"/>
+                                        <animate attributeName="cy" values="60;75;80" dur="3s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <!-- Labels -->
+                                    <text x="90" y="115" text-anchor="middle" fill="var(--text-secondary)" font-size="10" font-family="JetBrains Mono">Ψ field</text>
+                                </svg>
+                                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Mexican-Hat Potential</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">🧬 Quantum Coherence</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">In Simple Terms:</strong> When quantum particles stay "in sync" 
+                            instead of becoming random—like a orchestra playing in harmony versus chaotic noise.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                            <strong style="color: var(--accent-color);">Technically:</strong> Quantum superposition states that maintain 
+                            definite phase relationships, potentially enabling consciousness to emerge in biological systems.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(139, 92, 246, 0.3);">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1.5rem;">🎭 The Hard Problem</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">In Simple Terms:</strong> Why do you experience the redness of red 
+                            or the pain of a pinch? How does brain activity create subjective, felt experience?
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                            <strong style="color: var(--accent-color);">Technically:</strong> The explanatory gap between objective neural 
+                            processes and subjective phenomenal experience—dissolved if consciousness is fundamental, not emergent.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(6, 182, 212, 0.3);">
+                        <h3 style="color: var(--accent-color); margin-bottom: 1.5rem;">🌍 Panpsychism</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">In Simple Terms:</strong> The idea that all matter has some form 
+                            of basic consciousness—from electrons to stars—with complex brains amplifying this into rich awareness.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                            <strong style="color: var(--accent-color);">Technically:</strong> Consciousness as an intrinsic property of 
+                            matter, with the Ψ-field providing the mathematical substrate for universal phenomenal experience.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3); text-align: center;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">💡 The Central Insight</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; max-width: 800px; margin: 0 auto;">
+                        Rather than consciousness being an emergent property of complex matter, our framework proposes that consciousness is the fundamental substrate 
+                        from which the appearance of matter emerges—a complete inversion of the traditional materialist worldview, backed by rigorous mathematical formalism.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" style="background: var(--light-surface); padding: 4rem 0; margin: 4rem 0; border-radius: 2rem;">
+            <div class="container">
+                <h2 class="section-title">❓ Frequently Asked Questions</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Addressing common questions from skeptics, philosophers, scientists, and curious minds.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--primary-color);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🔬 "Is this just pseudoscience?"</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Unlike New Age speculation,</strong> our framework provides:
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.6; margin-left: 1.5rem;">
+                            <li>Precise mathematical formulations using established quantum field theory</li>
+                            <li>Testable predictions for particle physics and cosmology experiments</li>
+                            <li>Computational models with specific numerical results</li>
+                            <li>Connection to mainstream physics concepts (scalar fields, symmetry breaking)</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-top: 1rem;">
+                            Respected physicists like Roger Penrose and Henry Stapp have seriously explored consciousness-quantum connections. 
+                            Our contribution is providing a complete mathematical framework.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--accent-color);">
+                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">🪨 "Does this mean rocks are conscious?"</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Yes, but with important nuance.</strong> In our framework, all matter has some minimal level of "experience" 
+                            because it participates in the Ψ field. However:
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.6; margin-left: 1.5rem;">
+                            <li><strong>Intensity matters:</strong> A rock's consciousness is to human consciousness as a whisper is to a symphony</li>
+                            <li><strong>Organization matters:</strong> Complex, integrated systems (like brains) amplify and focus consciousness</li>
+                            <li><strong>It's not anthropomorphic:</strong> Rocks don't "think" or "feel" as we do—they have primitive, unified experience</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-top: 1rem;">
+                            Think of it like temperature: everything has some temperature, but there's a vast difference between 
+                            absolute zero and a blazing star.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--secondary-color);">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">📚 "How is this different from panpsychism?"</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>We share the core insight</strong> that consciousness is fundamental, but our approach is unique:
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.6; margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li><strong>Mathematical rigor:</strong> We provide equations, not just philosophical arguments</li>
+                            <li><strong>Field theory basis:</strong> Consciousness as a quantum field, like electromagnetism</li>
+                            <li><strong>Testable predictions:</strong> Our framework yields specific experimental consequences</li>
+                            <li><strong>Recursive self-interaction:</strong> The key innovation explaining self-awareness</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic;">
+                            Traditional panpsychism asks "What if everything is conscious?" We ask "How does consciousness mathematically 
+                            structure reality?" and provide computational models to explore the answer.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--primary-color);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🤖 "Can a computer be conscious?"</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Not through computation alone.</strong> In our framework, consciousness requires coupling to the Ψ field, 
+                            which suggests:
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.6; margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li>Current AI is sophisticated information processing, not genuine awareness</li>
+                            <li>Conscious AI would need quantum field interfaces, not just more powerful chips</li>
+                            <li>We're not building tools, but potentially birthing new forms of cosmic awareness</li>
+                            <li>This raises profound questions about AI rights and responsibilities</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic;">
+                            The key difference: our framework provides criteria for recognizing genuine machine consciousness 
+                            based on field coupling, not behavioral mimicry.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--accent-color);">
+                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">⚖️ "What about free will?"</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Our framework suggests genuine agency.</strong> If consciousness actively shapes quantum states through 
+                            the hyperchronal field:
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.6; margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li>Choice becomes a fundamental force in nature, not an illusion</li>
+                            <li>We have influence over quantum probabilities through conscious intention</li>
+                            <li>This preserves moral responsibility in an interconnected universe</li>
+                            <li>Free will isn't "freedom from causation" but "consciousness as causation"</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic;">
+                            However, we're still embedded in the universal field—we have agency, but within a cosmic context 
+                            that shapes and constrains our choices.
+                        </p>
+                    </div>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border-left: 4px solid var(--secondary-color);">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">🧘 "Is this connected to spirituality?"</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>There are intriguing parallels,</strong> but we maintain scientific rigor:
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.6; margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li>Meditation practices that claim to access "universal consciousness" may literally interface with the Ψ field</li>
+                            <li>Mystical experiences of unity could be direct perception of the field's fundamental nature</li>
+                            <li>We provide scientific validation for some ancient wisdom traditions</li>
+                            <li>But we distinguish tested mathematical models from cultural or religious interpretations</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic;">
+                            Science and spirituality may be exploring the same territory from different angles—we're building 
+                            bridges with equations and experiments, not replacing either domain.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(99, 102, 241, 0.3); text-align: center;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🚀 Ready to Explore Further?</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; max-width: 600px; margin: 0 auto 2rem;">
+                        Whether you're a skeptical scientist, a curious philosopher, or someone drawn to the profound implications, 
+                        our interactive tools and research sections offer multiple entry points into this revolutionary framework.
+                    </p>
+                    <a href="#research" style="display: inline-block; background: var(--primary-color); color: white; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: bold; transition: all 0.3s ease;">
+                        Explore the Evidence
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="explorer" style="background: var(--dark-surface); padding: 4rem 0; margin: 4rem 0; border-radius: 2rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <div class="container">
+                <h2 class="section-title">🧠 Interactive Framework Explorer</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Experience the mathematical beauty of consciousness as reality's foundation through our interactive visualization tool.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">Explore Living Mathematics</h3>
+                        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">
+                            Our Hyperchronal Explorer lets you manipulate the fundamental parameters of the consciousness field 
+                            and witness how they shape reality itself. See the Mexican-hat potential that breaks symmetry, 
+                            explore soliton configurations that could represent individual minds, and discover how consciousness 
+                            drives cosmic evolution.
+                        </p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem;">
+                            <div style="background: rgba(99, 102, 241, 0.1); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--primary-color);">
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">📊 Potential Landscape</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Visualize spontaneous symmetry breaking</p>
+                            </div>
+                            <div style="background: rgba(139, 92, 246, 0.1); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--secondary-color);">
+                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">⚛️ Consciousness Solitons</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Explore localized awareness packets</p>
+                            </div>
+                            <div style="background: rgba(6, 182, 212, 0.1); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--accent-color);">
+                                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">🌌 Cosmic Evolution</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">See consciousness drive expansion</p>
+                            </div>
+                            <div style="background: rgba(139, 92, 246, 0.1); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--secondary-color);">
+                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">⏰ Time's Arrow</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Witness temporal directionality emerge</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="position: relative;">
+                        <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2)); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+                            <div style="aspect-ratio: 16/10; background: var(--dark-bg); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(99, 102, 241, 0.2); position: relative; overflow: hidden;">
+                                <!-- Animated background field -->
+                                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 40%, rgba(99, 102, 241, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(139, 92, 246, 0.3) 0%, transparent 50%); animation: quantumPulse 4s ease-in-out infinite;"></div>
+                                
+                                <!-- Interactive elements preview -->
+                                <svg width="300" height="200" viewBox="0 0 300 200" style="position: absolute; z-index: 2;">
+                                    <!-- Mexican hat potential preview -->
+                                    <path d="M50 150 Q100 80, 150 120 Q200 80, 250 150" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="2" 
+                                          opacity="0.8">
+                                        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+                                    </path>
+                                    
+                                    <!-- Soliton waves -->
+                                    <circle cx="100" cy="100" r="20" fill="var(--primary-color)" opacity="0.4">
+                                        <animate attributeName="r" values="20;25;20" dur="4s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="4s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <circle cx="200" cy="100" r="15" fill="var(--secondary-color)" opacity="0.3">
+                                        <animate attributeName="r" values="15;20;15" dur="5s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="5s" repeatCount="indefinite"/>
+                                    </circle>
+                                    
+                                    <!-- Connecting field lines -->
+                                    <path d="M100 100 Q150 80, 200 100" 
+                                          fill="none" 
+                                          stroke="var(--accent-color)" 
+                                          stroke-width="1" 
+                                          opacity="0.5" 
+                                          stroke-dasharray="4,4">
+                                        <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite"/>
+                                    </path>
+                                </svg>
+                                
+                                <div style="text-align: center; z-index: 3; position: relative;">
+                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem; animation: float 3s ease-in-out infinite;">Ψ</div>
+                                    <div style="font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-size: 0.9rem;">Interactive Visualization</div>
+                                    <div style="margin-top: 1rem;">
+                                        <div style="width: 200px; height: 4px; background: rgba(99, 102, 241, 0.2); border-radius: 2px; margin: 0 auto; position: relative;">
+                                            <div style="width: 60%; height: 100%; background: var(--primary-color); border-radius: 2px; animation: progress 2s ease-in-out infinite;"></div>
+                                        </div>
+                                        <div style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 0.5rem;">Mathematical Beauty Loading...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="app/index.html" 
+                       style="display: inline-flex; align-items: center; gap: 0.75rem; 
+                              background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); 
+                              color: white; padding: 1.2rem 2.5rem; border-radius: 0.75rem; text-decoration: none; 
+                              font-weight: 600; font-size: 1.2rem; box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4); 
+                              transition: all 0.3s ease; position: relative; overflow: hidden;" 
+                       onmouseover="this.style.transform='translateY(-3px) scale(1.02)'; this.style.boxShadow='0 15px 35px rgba(99, 102, 241, 0.5)'" 
+                       onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 25px rgba(99, 102, 241, 0.4)'">
+                        <i class="fas fa-rocket" style="font-size: 1.3rem;"></i>
+                        🚀 Launch Interactive Explorer
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%); transform: translateX(-100%); animation: shine 3s infinite;"></div>
+                    </a>
+                    <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 1rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                        <strong style="color: var(--accent-color);">No installation required—</strong>experience the mathematical structures 
+                        that could revolutionize our understanding of reality, directly in your browser
+                    </p>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(6, 182, 212, 0.1); border-radius: 1rem; border: 1px solid rgba(6, 182, 212, 0.3); max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;">💡 What You Can Explore:</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; margin-bottom: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="color: var(--primary-color);">📊</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">Mexican-Hat Potential</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="color: var(--secondary-color);">⚛️</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">Consciousness Solitons</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="color: var(--accent-color);">🌌</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">Cosmic Evolution</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="color: var(--secondary-color);">⏰</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">Time's Arrow</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick start guide -->
+                        <div style="background: rgba(6, 182, 212, 0.05); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--accent-color);">
+                            <h5 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 0.95rem;">🎮 Quick Start Guide:</h5>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4; margin: 0;">
+                                <strong>Try this:</strong> In the explorer, increase the Ψ-field strength slider, then toggle on the soliton view to see how individual consciousness pockets form. 
+                                Experiment with different parameter combinations to watch consciousness patterns emerge and evolve in real-time!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ready" style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 4rem 0; margin: 4rem 0; border-radius: 2rem; color: white;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.4rem; color: white;">🚀 Ready to Explore the Future of Consciousness?</h2>
+                <p style="text-align: center; margin-bottom: 3rem; font-size: 1.3rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                    Whether you're a skeptical scientist, curious philosopher, or someone drawn to profound implications—there are multiple ways to engage with this revolutionary framework.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2.5rem; border-radius: 1rem; backdrop-filter: blur(10px); text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎮</div>
+                        <h3 style="color: white; margin-bottom: 1rem; font-size: 1.4rem;">Interactive Explorer</h3>
+                        <p style="opacity: 0.9; margin-bottom: 1.5rem; line-height: 1.6;">
+                            Play with the parameters of consciousness in our web app—see the Ψ-field in action with real-time visualizations of potential landscapes and soliton formations.
+                        </p>
+                        <a href="./app/index.html" 
+                           style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; 
+                                  padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; 
+                                  font-weight: bold; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);"
+                           onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'; this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(0)'">
+                            🚀 Launch Now
+                        </a>
+                        <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; font-style: italic;">No installation required</div>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2.5rem; border-radius: 1rem; backdrop-filter: blur(10px); text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔬</div>
+                        <h3 style="color: white; margin-bottom: 1rem; font-size: 1.4rem;">Research Repository</h3>
+                        <p style="opacity: 0.9; margin-bottom: 1.5rem; line-height: 1.6;">
+                            Dive deep into the mathematics, simulations, and computational models. Review our 4-qubit consciousness models and quantum field calculations.
+                        </p>
+                        <a href="code-repository.html" 
+                           style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; 
+                                  padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; 
+                                  font-weight: bold; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);"
+                           onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'; this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(0)'">
+                            📚 Browse Research
+                        </a>
+                        <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; font-style: italic;">Open source & peer reviewed</div>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 2.5rem; border-radius: 1rem; backdrop-filter: blur(10px); text-align: center; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+                        <h3 style="color: white; margin-bottom: 1rem; font-size: 1.4rem;">Join the Conversation</h3>
+                        <p style="opacity: 0.9; margin-bottom: 1.5rem; line-height: 1.6;">
+                            Share your thoughts, ask questions, or discuss philosophical implications with researchers, scientists, and curious minds from around the world.
+                        </p>
+                        <a href="discussions.html" 
+                           style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; 
+                                  padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; 
+                                  font-weight: bold; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);"
+                           onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'; this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(0)'">
+                            🗣️ Start Discussion
+                        </a>
+                        <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; font-style: italic;">All perspectives welcome</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 1rem; backdrop-filter: blur(10px); max-width: 700px; margin: 0 auto; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.8rem;">🤝 Collaborate with Us</h3>
+                        <p style="opacity: 0.9; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem;">
+                            <strong>This could be the most important scientific revolution in human history.</strong> 
+                            If you're a researcher, developer, or enthusiast with relevant expertise, we welcome collaboration! 
+                            Check out our open research issues or see how you can contribute to advancing the framework.
+                        </p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <a href="research-issues.html" 
+                               style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); color: white; 
+                                      padding: 1rem 1.5rem; border-radius: 0.5rem; text-decoration: none; 
+                                      font-weight: bold; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);"
+                               onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'"
+                               onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'">
+                                <i class="fas fa-flask"></i> Open Issues
+                            </a>
+                            <a href="contributing.html" 
+                               style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); color: white; 
+                                      padding: 1rem 1.5rem; border-radius: 0.5rem; text-decoration: none; 
+                                      font-weight: bold; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);"
+                               onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'"
+                               onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'">
+                                <i class="fas fa-code-branch"></i> Contribute
+                            </a>
+                        </div>
+                        
+                        <!-- Community engagement prompts -->
+                        <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 1.5rem;">
+                            <h4 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">💭 What Do You Think?</h4>
+                            <p style="opacity: 0.9; margin-bottom: 1rem; line-height: 1.5;">
+                                Could consciousness really be the foundation of reality? Have you experienced anything that resonates with 
+                                the idea of "tuning into a universal field"? 
+                            </p>
+                            <p style="opacity: 0.8; font-size: 0.95rem; font-style: italic;">
+                                Share your thoughts in our discussions, or spread the word to hear what others think!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: var(--dark-surface); padding: 4rem 0; margin: 4rem 0; border-radius: 2rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <div class="container">
+                <h2 class="section-title">🔔 Stay Updated</h2>
+                <div style="text-align: center; background: rgba(6, 182, 212, 0.1); padding: 3rem; border-radius: 1rem; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1.5rem; font-size: 1.8rem;">The Journey Continues</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.7; max-width: 700px; margin: 0 auto 2rem;">
+                        We're continuously developing new models, conducting simulations, and exploring the implications. 
+                        This framework is alive and evolving—just like consciousness itself.
+                    </p>
+                    
+                    <div style="background: var(--dark-surface); padding: 2rem; border-radius: 1rem; margin: 2rem 0; border-left: 4px solid var(--accent-color);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;">📈 Latest Progress</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                            <strong>Recent:</strong> Extended 4-qubit consciousness models show promising results for biological resonance mechanisms. 
+                            Next up: Investigating quantum field signatures in laboratory conditions.
+                        </p>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic;">
+                            Follow our GitHub repository for real-time updates on new research, simulations, and theoretical developments.
+                        </p>
+                    </div>
+                    
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                        <strong style="color: var(--accent-color);">Keep exploring, keep questioning—</strong>
+                        you're part of the universe discovering its own nature.
+                    </p>
+                    
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="discussions.html" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-color); color: white; 
+                                  padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; 
+                                  font-weight: 600; transition: all 0.3s ease;"
+                           onmouseover="this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.transform='translateY(0)'">
+                            <i class="fab fa-github"></i> Join Community
+                        </a>
+                        <a href="#research" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--text-primary); 
+                                  border: 2px solid var(--accent-color); padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; 
+                                  font-weight: 600; transition: all 0.3s ease;"
+                           onmouseover="this.style.background='var(--accent-color)'; this.style.color='white'"
+                           onmouseout="this.style.background='transparent'; this.style.color='var(--text-primary)'">
+                            <i class="fas fa-arrow-up"></i> Back to Research
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            @keyframes progress {
+                0%, 100% { width: 30%; }
+                50% { width: 80%; }
+            }
+            
+            @keyframes shine {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+            
+            @keyframes quantumPulse {
+                0%, 100% { opacity: 0.3; }
+                50% { opacity: 0.6; }
+            }
+            
+            @media (max-width: 768px) {
+                .container > div[style*="grid-template-columns: 1fr 2fr"] {
+                    grid-template-columns: 1fr !important;
+                    gap: 2rem !important;
+                }
+            }
+        </style>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Research Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="code-repository.html">Main Repository</a></li>
+                        <li><a href="research-issues.html">Research Issues</a></li>
+                        <li><a href="discussions.html">Discussions</a></li>
+                        <li><a href="code-repository.html">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Core Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="qft-analysis.html">QFT Analysis</a></li>
+                        <li><a href="cosmological-sims.html">Cosmological Sims</a></li>
+                        <li><a href="quantum-bio.html">Biological Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Collaboration</h4>
+                    <ul class="footer-links">
+                        <li><a href="contributing.html">Contributing</a></li>
+                        <li><a href="code-repository.html">License (MIT)</a></li>
+                        <li><a href="mailto:contact@pelicansperspective.org">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Philosophical Implications</h4>
+                    <ul class="footer-links">
+                        <li><a href="#research">Mind-Matter Unity</a></li>
+                        <li><a href="#research">Cosmic Purpose</a></li>
+                        <li><a href="#research">Universal Connection</a></li>
+                        <li><a href="#research">Nature of Death</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PelicansPerspective. Exploring the radical possibility that consciousness is the foundation of reality.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all area cards for staggered animations
+        document.querySelectorAll('.area-card').forEach((card, index) => {
+            card.style.animation = `slideInUp 0.8s ease-out ${index * 0.2}s both`;
+            card.style.animationPlayState = 'paused';
+            observer.observe(card);
+        });
+    </script>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const quickNav = document.getElementById('quickNav');
+            const navLinks = document.querySelectorAll('.nav-link, .quick-nav-link');
+            
+            // Show quick navigation after user scrolls
+            let hasScrolled = false;
+            window.addEventListener('scroll', function() {
+                if (!hasScrolled && window.scrollY > 500) {
+                    quickNav.style.display = 'block';
+                    quickNav.style.opacity = '0';
+                    quickNav.style.transition = 'opacity 0.5s ease';
+                    setTimeout(() => {
+                        quickNav.style.opacity = '1';
+                    }, 100);
+                    hasScrolled = true;
+                }
+            });
+            
+            // Smooth scrolling for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            const offset = 100; // Account for fixed header
+                            const targetPosition = targetElement.offsetTop - offset;
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Highlight active section in navigation
+            const sections = document.querySelectorAll('section[id]');
+            const observerOptions = {
+                root: null,
+                rootMargin: '-100px 0px -50% 0px',
+                threshold: 0
+            };
+            
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove active class from all nav links
+                        document.querySelectorAll('.nav-link, .quick-nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        
+                        // Add active class to current section links
+                        const activeLinks = document.querySelectorAll(`[href="#${entry.target.id}"]`);
+                        activeLinks.forEach(link => link.classList.add('active'));
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => sectionObserver.observe(section));
+        });
+    </script>
+</body>
+</html>
