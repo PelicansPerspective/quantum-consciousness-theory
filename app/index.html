@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperchronal Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Hyperchronal Explorer</h1>
+            <div class="nav-buttons">
+                <button class="btn btn--primary nav-btn" onclick="scrollToSection('potential')">Potential</button>
+                <button class="btn btn--primary nav-btn" onclick="scrollToSection('soliton')">Vacuum & Soliton</button>
+                <button class="btn btn--primary nav-btn" onclick="scrollToSection('cosmo')">Cosmology</button>
+                <button class="btn btn--primary nav-btn" onclick="scrollToSection('kernel')">Kernel Time Arrow</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Introduction -->
+        <section class="intro-section">
+            <div class="container">
+                <h2>Explore the Hyperchronal Framework</h2>
+                <p>This interactive application helps you visualize key mathematical structures and predictions from the Hyperchronal Framework theory. Adjust parameters and observe how they affect the potential landscape, vacuum states, cosmological evolution, and the emergence of time's arrow.</p>
+            </div>
+        </section>
+
+        <!-- Potential Section -->
+        <section id="potential" class="section">
+            <div class="container">
+                <h2>Mexican-Hat Potential</h2>
+                <p>Explore the scalar field potential: $V(\phi) = -m^2 \phi^2 + g \phi^4$</p>
+                
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label class="form-label">Mass parameter (m): <span id="m-value">1.0</span></label>
+                        <input type="range" id="m-slider" class="form-control" min="0.1" max="10" step="0.1" value="1.0">
+                        <input type="number" id="m-input" class="form-control" min="0.1" max="10" step="0.1" value="1.0">
+                    </div>
+                    <div class="control-group">
+                        <label class="form-label">Coupling constant (g): <span id="g-value">0.5</span></label>
+                        <input type="range" id="g-slider" class="form-control" min="0.01" max="5" step="0.01" value="0.5">
+                        <input type="number" id="g-input" class="form-control" min="0.01" max="5" step="0.01" value="0.5">
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="potential-chart"></canvas>
+                </div>
+
+                <div class="info-panel">
+                    <p><strong>Vacuum expectation value:</strong> $v = \frac{m^2}{2g} = $ <span id="vev-display">1.0</span></p>
+                    <p class="info-text">The Mexican-hat shape shows spontaneous symmetry breaking. The minima at $\pm v$ represent the vacuum states.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vacuum & Soliton Section -->
+        <section id="soliton" class="section">
+            <div class="container">
+                <h2>Vacuum & Soliton Properties</h2>
+                <p>Computed properties based on current potential parameters:</p>
+
+                <div class="results-grid">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Vacuum Expectation Value</h3>
+                            <div class="result-value" id="soliton-vev">1.000</div>
+                            <p class="result-formula">$v = \frac{m^2}{2g}$</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Soliton Mass</h3>
+                            <div class="result-value" id="soliton-mass">157.9</div>
+                            <p class="result-formula">$M = \frac{8\pi^2 v^2}{g}$</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Soliton Size</h3>
+                            <div class="result-value" id="soliton-size">1.414</div>
+                            <p class="result-formula">$\approx \frac{1}{\sqrt{g v^2}}$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cosmology Section -->
+        <section id="cosmo" class="section">
+            <div class="container">
+                <h2>Cosmological Evolution</h2>
+                <p>Explore the equation of state for scalar field dark energy:</p>
+
+                <div class="control-group">
+                    <label class="form-label">Kinetic energy fraction (k): <span id="k-value">0.05</span></label>
+                    <input type="range" id="k-slider" class="form-control" min="0" max="1" step="0.01" value="0.05">
+                </div>
+
+                <div class="cosmo-results">
+                    <div class="equation-state">
+                        <h3>Equation of State Parameter</h3>
+                        <div class="w-display">
+                            <span class="w-value" id="w-value">-0.905</span>
+                            <span class="w-indicator" id="w-indicator">ACCELERATING</span>
+                        </div>
+                        <p class="result-formula">$w = \frac{k - 1}{k + 1}$</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Dark Energy-Dark Matter Unification</h4>
+                        <p>In the Hyperchronal Framework, the scalar field provides a unified description of dark energy and dark matter. When the kinetic energy fraction is low (k ≪ 1), the field behaves like dark energy with w ≈ -1, driving cosmic acceleration. The framework naturally explains the transition between matter-dominated and dark energy-dominated epochs through the evolution of the field's kinetic and potential energy components.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kernel Time Arrow Section -->
+        <section id="kernel" class="section">
+            <div class="container">
+                <h2>Kernel Time Arrow</h2>
+                <p>Explore the emergence of temporal directionality through coherence coupling:</p>
+
+                <div class="control-group">
+                    <label class="form-label">Coherence coupling (κ_c): <span id="kappa-c-value">0.7</span></label>
+                    <input type="range" id="kappa-c-slider" class="form-control" min="0" max="1" step="0.01" value="0.7">
+                </div>
+
+                <div class="kernel-charts">
+                    <div class="chart-half">
+                        <h3>Coupling Distribution</h3>
+                        <canvas id="coupling-chart"></canvas>
+                    </div>
+                    <div class="chart-half">
+                        <h3>Recursive Entropy Growth</h3>
+                        <canvas id="entropy-chart"></canvas>
+                        <p class="chart-formula">$S_{rec}(\tau) = S_0 + (1 - \kappa_c) \tau$</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
