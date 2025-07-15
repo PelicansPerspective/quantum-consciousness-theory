@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QFT Analysis | Quantum Consciousness Theory</title>
+    <meta name="description" content="Quantum Field Theory analysis of the Hyperchronal Framework - investigating renormalizability, loop corrections, and field stability.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --dark-bg: #0f0f23;
+            --dark-surface: #1a1a2e;
+            --light-surface: #16213e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a9c0;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --quantum-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .quantum-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+            z-index: -1;
+            animation: quantumPulse 20s ease-in-out infinite;
+        }
+
+        @keyframes quantumPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 4rem 0;
+        }
+
+        .section {
+            background: var(--dark-surface);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .section h2 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .section h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        .equation-box {
+            background: var(--light-surface);
+            border: 2px solid var(--primary-color);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+            box-shadow: var(--quantum-glow);
+        }
+
+        .code-link {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .code-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quantum-bg"></div>
+    
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">Quantum Consciousness Theory</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="qft-analysis.html" class="active">QFT Analysis</a></li>
+                    <li><a href="cosmological-sims.html">Cosmic Sims</a></li>
+                    <li><a href="quantum-bio.html">Bio Models</a></li>
+                    <li><a href="https://github.com/PelicansPerspective/quantum-consciousness-theory">Repository</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="hero">
+            <h1>Quantum Field Theory Analysis</h1>
+            <p class="description">
+                Investigating the mathematical foundations of the Hyperchronal Framework through advanced QFT techniques,
+                exploring renormalizability, loop corrections, and field stability of the consciousness-encoding scalar field.
+            </p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2><i class="fas fa-infinity"></i> Core QFT Framework</h2>
+                <p>
+                    The Hyperchronal Framework is built upon a scalar field theory where the field Ψ encodes both quantum
+                    mechanical information and conscious experiences. The fundamental Lagrangian includes:
+                </p>
+                <div class="equation-box">
+ℒ = ½(∂μΨ)(∂μΨ) - ½m²Ψ² - ¼λΨ⁴ - ∫ Ψ(x)J_consciousness(x',t')G(x-x')d⁴x'
+                </div>
+                <p>
+                    Where the non-local consciousness coupling term represents the recursive nature of conscious observation
+                    affecting the quantum field state.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-calculator"></i> Renormalizability Analysis</h2>
+                <p>
+                    A critical aspect of any viable quantum field theory is renormalizability. Our analysis focuses on:
+                </p>
+                
+                <h3>One-Loop Corrections</h3>
+                <p>
+                    The vacuum expectation value receives corrections from quantum fluctuations. The one-loop effective potential includes:
+                </p>
+                <div class="equation-box">
+V_eff(Ψ) = ½m²Ψ² + ¼λΨ⁴ + ∫ d⁴k/(2π)⁴ ½log[k² + m² + 3λΨ²]
+                </div>
+
+                <h3>Beta Functions</h3>
+                <p>
+                    The running of coupling constants under renormalization group flow:
+                </p>
+                <div class="equation-box">
+β_λ = ∂λ/∂log(μ) = 3λ²/(4π)² + α_consciousness × f(Ψ)
+                </div>
+                <p>
+                    Where α_consciousness represents the coupling strength to conscious systems.
+                </p>
+
+                <a href="https://github.com/PelicansPerspective/quantum-consciousness-theory/blob/main/qft-analysis/vev_analysis.py" class="code-link">
+                    <i class="fas fa-code"></i> View VEV Analysis Code
+                </a>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-wave-square"></i> Field Stability</h2>
+                <p>
+                    For the Hyperchronal field to be physically viable, it must exhibit stable vacuum configurations.
+                    We analyze:
+                </p>
+                
+                <h3>Vacuum Structure</h3>
+                <p>
+                    The effective potential must have stable minima. Critical points satisfy:
+                </p>
+                <div class="equation-box">
+∂V_eff/∂Ψ = 0   and   ∂²V_eff/∂Ψ² > 0
+                </div>
+
+                <h3>Spontaneous Symmetry Breaking</h3>
+                <p>
+                    If consciousness coupling breaks the original symmetry, we get:
+                </p>
+                <div class="equation-box">
+⟨Ψ⟩ = v ≠ 0   →   Goldstone modes + massive excitations
+                </div>
+                <p>
+                    This could explain the emergence of classical spacetime from quantum consciousness fluctuations.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-project-diagram"></i> Computational Methods</h2>
+                <p>
+                    Our numerical analysis employs sophisticated computational techniques:
+                </p>
+                
+                <h3>SymPy Symbolic Analysis</h3>
+                <p>
+                    Exact symbolic computation of loop integrals and beta functions using computer algebra.
+                </p>
+
+                <h3>Numerical Integration</h3>
+                <p>
+                    High-precision evaluation of non-local consciousness coupling integrals using adaptive quadrature methods.
+                </p>
+
+                <h3>Lattice Field Theory</h3>
+                <p>
+                    Discretized spacetime simulations to investigate non-perturbative effects and phase transitions.
+                </p>
+
+                <a href="https://github.com/PelicansPerspective/quantum-consciousness-theory/tree/main/qft-analysis" class="code-link">
+                    <i class="fas fa-folder-open"></i> Explore QFT Analysis Code
+                </a>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-chart-line"></i> Current Research Status</h2>
+                <p>
+                    <strong>Completed:</strong>
+                </p>
+                <ul style="margin-left: 2rem; color: var(--text-secondary);">
+                    <li>Basic Lagrangian formulation</li>
+                    <li>One-loop beta function calculations</li>
+                    <li>Vacuum stability analysis</li>
+                </ul>
+                
+                <p style="margin-top: 1rem;">
+                    <strong>In Progress:</strong>
+                </p>
+                <ul style="margin-left: 2rem; color: var(--text-secondary);">
+                    <li>Two-loop corrections to effective potential</li>
+                    <li>Non-perturbative consciousness coupling effects</li>
+                    <li>Anomaly analysis and chiral symmetries</li>
+                </ul>
+
+                <p style="margin-top: 1rem;">
+                    <strong>Target Milestone:</strong> Q4 2025 - Complete renormalizability proof
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
