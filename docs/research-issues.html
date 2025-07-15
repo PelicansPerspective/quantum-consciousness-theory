@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Issues & Proposals - Hyperchronal Framework</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --dark-bg: #0f0f23;
+            --dark-surface: #1a1a3e;
+            --light-surface: #2a2a5e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: var(--dark-surface);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .issue-card {
+            background: var(--dark-surface);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .issue-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .issue-label {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .issue-label.priority-high {
+            background: #ef4444;
+        }
+
+        .issue-label.priority-medium {
+            background: #f59e0b;
+        }
+
+        .issue-label.priority-low {
+            background: #10b981;
+        }
+
+        .issue-label.type-experiment {
+            background: var(--secondary-color);
+        }
+
+        .issue-label.type-theory {
+            background: var(--accent-color);
+        }
+
+        .issue-label.type-computation {
+            background: #8b5cf6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🌌 Hyperchronal Framework</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="mathematical-appendix.html">Mathematics</a>
+                    <a href="quantum-bio.html">Biology</a>
+                    <a href="cosmological-sims.html">Cosmology</a>
+                    <a href="qft-analysis.html">QFT Analysis</a>
+                    <a href="app/index.html">Explorer</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Research Issues & Proposals</h1>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Open research questions, experimental proposals, and theoretical challenges that need investigation. 
+                Each issue represents an opportunity to advance our understanding of consciousness and quantum mechanics.
+            </p>
+
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <a href="mailto:research@hyperchronal.org?subject=New Research Proposal" class="btn btn-primary">
+                    Submit New Research Proposal
+                </a>
+            </div>
+
+            <div class="research-grid">
+                <div class="issue-card">
+                    <div class="issue-meta">
+                        <span class="issue-label priority-high">High Priority</span>
+                        <span class="issue-label type-experiment">Experimental</span>
+                    </div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                        Issue #001: Casimir Effect Modifications Near Biological Systems
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Problem:</strong> If the hyperchronal field couples to biological consciousness, 
+                        we should detect measurable modifications to vacuum fluctuations near living systems. 
+                        The Casimir effect provides a precise way to measure quantum vacuum properties.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Proposed Experiment:</strong> Measure Casimir force between parallel plates 
+                        with and without biological samples (neural tissue, microtubule solutions, living cells) 
+                        placed in the gap. Look for force deviations of ~10⁻¹⁵ N scale.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Required Expertise:</strong> Precision force measurement, quantum optics, 
+                        surface physics, biology
+                    </p>
+                    <a href="mailto:research@hyperchronal.org?subject=Casimir Effect Experiment" class="btn btn-secondary">
+                        Join This Research
+                    </a>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-meta">
+                        <span class="issue-label priority-high">High Priority</span>
+                        <span class="issue-label type-theory">Theoretical</span>
+                    </div>
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">
+                        Issue #002: Renormalization of the Hyperchronal Field Equation
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Problem:</strong> The non-local self-interaction term in our field equation 
+                        ∫ Ψ(x',t')G(x-x',t-t')d⁴x' may lead to divergences that require renormalization. 
+                        We need to understand the theory's UV behavior.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Approach Needed:</strong> Calculate one-loop corrections, identify divergence 
+                        structure, develop counterterm strategy. May require novel regularization schemes 
+                        for non-local interactions.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Required Expertise:</strong> Quantum field theory, renormalization theory, 
+                        mathematical physics
+                    </p>
+                    <a href="mailto:research@hyperchronal.org?subject=Renormalization Theory" class="btn btn-secondary">
+                        Tackle This Problem
+                    </a>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-meta">
+                        <span class="issue-label priority-medium">Medium Priority</span>
+                        <span class="issue-label type-computation">Computational</span>
+                    </div>
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+                        Issue #003: Large-Scale Quantum Consciousness Simulations
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Challenge:</strong> Our current 4-qubit simulations are promising but limited. 
+                        We need to scale to 20+ qubit systems to model realistic biological quantum networks 
+                        while maintaining computational feasibility.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Technical Needs:</strong> Efficient tensor network methods, quantum circuit 
+                        optimization, parallel computing on GPUs/quantum hardware, approximate methods 
+                        for large Hilbert spaces.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Required Expertise:</strong> Quantum computing, tensor networks, high-performance 
+                        computing, quantum many-body physics
+                    </p>
+                    <a href="mailto:research@hyperchronal.org?subject=Large Scale Simulations" class="btn btn-secondary">
+                        Contribute Computing
+                    </a>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-meta">
+                        <span class="issue-label priority-medium">Medium Priority</span>
+                        <span class="issue-label type-experiment">Experimental</span>
+                    </div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                        Issue #004: Bell Inequality Tests in Meditation States
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Hypothesis:</strong> If consciousness enhances quantum coherence through 
+                        hyperchronal field coupling, experienced meditators in deep states might influence 
+                        nearby quantum measurements, potentially strengthening Bell inequality violations.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Experimental Setup:</strong> EPR measurements using entangled photons 
+                        performed in meditation centers during group meditation sessions vs. control 
+                        environments. Look for correlation strength variations.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Required Expertise:</strong> Quantum optics, Bell test experiments, 
+                        meditation research, statistical analysis
+                    </p>
+                    <a href="mailto:research@hyperchronal.org?subject=Bell Test Meditation Experiment" class="btn btn-secondary">
+                        Design This Experiment
+                    </a>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-meta">
+                        <span class="issue-label priority-low">Low Priority</span>
+                        <span class="issue-label type-theory">Theoretical</span>
+                    </div>
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">
+                        Issue #005: Cosmological Consciousness Evolution Models
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Question:</strong> How does cosmic consciousness evolve from the Big Bang 
+                        to present? Can we model the Ψ-field dynamics during inflation, nucleosynthesis, 
+                        recombination, and structure formation?
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Approach:</strong> Couple hyperchronal field to Friedmann equations, 
+                        investigate how consciousness density evolves with universe expansion. 
+                        Look for observational signatures in CMB, large-scale structure.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Required Expertise:</strong> Cosmology, early universe physics, 
+                        observational astronomy, field theory in curved spacetime
+                    </p>
+                    <a href="mailto:research@hyperchronal.org?subject=Cosmological Consciousness Models" class="btn btn-secondary">
+                        Explore Cosmic Evolution
+                    </a>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-meta">
+                        <span class="issue-label priority-high">High Priority</span>
+                        <span class="issue-label type-experiment">Experimental</span>
+                    </div>
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+                        Issue #006: Microtubule Quantum Coherence Measurements
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Background:</strong> Penrose-Hameroff proposed quantum processing in 
+                        neural microtubules. Our framework suggests microtubules could act as biological 
+                        antennas for the hyperchronal field, maintaining coherence longer than expected.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Measurement Goal:</strong> Use advanced quantum sensing (NV centers, 
+                        SQUIDs) to detect coherent quantum states in microtubule networks. Compare 
+                        isolated tubulin vs. intact neural tissue.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <strong>Required Expertise:</strong> Quantum sensing, neurobiology, 
+                        single-molecule techniques, cryogenic measurements
+                    </p>
+                    <a href="mailto:research@hyperchronal.org?subject=Microtubule Coherence Experiment" class="btn btn-secondary">
+                        Measure Biological Coherence
+                    </a>
+                </div>
+            </div>
+
+            <div style="background: var(--light-surface); border-radius: 1rem; padding: 3rem; margin: 3rem 0; text-align: center;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">🚀 Propose New Research</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Have an idea for testing the hyperchronal framework? Identified a theoretical gap that needs addressing? 
+                    Submit your research proposal and help advance our understanding of consciousness.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; text-align: left;">
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">🧪 Experimental</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Design new ways to test consciousness signatures in physical systems
+                        </p>
+                    </div>
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">📐 Theoretical</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Develop mathematical frameworks and solve theoretical problems
+                        </p>
+                    </div>
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">💻 Computational</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Create simulations and computational models for consciousness
+                        </p>
+                    </div>
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">🔬 Observational</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Find consciousness signatures in existing astronomical/biological data
+                        </p>
+                    </div>
+                </div>
+                <a href="mailto:research@hyperchronal.org?subject=New Research Proposal" class="btn btn-primary">
+                    Submit Research Proposal
+                </a>
+            </div>
+
+            <div style="background: var(--dark-surface); border-radius: 1rem; padding: 2rem; margin: 2rem 0; border: 1px solid rgba(99, 102, 241, 0.3);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">📋 Research Priorities</h3>
+                <div style="color: var(--text-secondary); line-height: 1.7;">
+                    <p><strong style="color: var(--accent-color);">Immediate Priorities (2024-2025):</strong> 
+                    Establish experimental protocols for detecting consciousness signatures. Focus on measurable 
+                    quantum effects that distinguish consciousness-coupled systems from purely physical ones.</p>
+                    
+                    <p><strong style="color: var(--accent-color);">Medium-term Goals (2025-2027):</strong> 
+                    Develop comprehensive theoretical framework with renormalized field equations. Scale up 
+                    computational models to realistic biological system sizes.</p>
+                    
+                    <p><strong style="color: var(--accent-color);">Long-term Vision (2027+):</strong> 
+                    Achieve reproducible laboratory demonstrations of consciousness-matter interactions. 
+                    Establish hyperchronal framework as tested scientific theory.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

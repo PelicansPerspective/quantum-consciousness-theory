@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Repository - Hyperchronal Framework</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --dark-bg: #0f0f23;
+            --dark-surface: #1a1a3e;
+            --light-surface: #2a2a5e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: var(--dark-surface);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .code-section {
+            background: var(--dark-surface);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .code-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .code-block {
+            background: var(--light-surface);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow-x: auto;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+
+        .file-tree {
+            background: var(--light-surface);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🌌 Hyperchronal Framework</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="mathematical-appendix.html">Mathematics</a>
+                    <a href="quantum-bio.html">Biology</a>
+                    <a href="cosmological-sims.html">Cosmology</a>
+                    <a href="qft-analysis.html">QFT Analysis</a>
+                    <a href="app/index.html">Explorer</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Code Repository</h1>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Explore the computational implementations, simulations, and mathematical models that support 
+                the hyperchronal framework research. All code is open source and available for research use.
+            </p>
+
+            <div class="code-section">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">📁 Repository Structure</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    The research codebase is organized into focused modules for different aspects of consciousness 
+                    and quantum mechanics research.
+                </p>
+                <div class="file-tree">
+                    <div style="color: var(--accent-color);">📦 quantum-consciousness-theory/</div>
+                    <div style="margin-left: 1rem; color: var(--text-secondary);">
+                        ├── 🧮 <strong style="color: var(--primary-color);">qft-analysis/</strong><br>
+                        │   ├── vev_analysis.py<br>
+                        │   ├── field_equations.py<br>
+                        │   └── renormalization.py<br>
+                        ├── 🌌 <strong style="color: var(--secondary-color);">cosmological-sims/</strong><br>
+                        │   ├── quintessence_evolution.py<br>
+                        │   ├── cmb_signatures.py<br>
+                        │   └── structure_formation.py<br>
+                        ├── 🧠 <strong style="color: var(--accent-color);">toy-models/</strong><br>
+                        │   ├── quantum_bio_coupling.py<br>
+                        │   ├── microtubule_coherence.py<br>
+                        │   └── neural_networks.py<br>
+                        ├── 🎮 <strong style="color: var(--primary-color);">app/</strong><br>
+                        │   ├── index.html<br>
+                        │   ├── app.js<br>
+                        │   └── style.css<br>
+                        └── 📋 <strong style="color: var(--text-primary);">docs/</strong><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;├── mathematical-appendix.html<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;├── quantum-bio.html<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;└── cosmological-sims.html
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-grid">
+                <div class="code-section">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🧮 QFT Analysis Module</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Quantum field theory calculations for the hyperchronal field Ψ. Includes vacuum expectation 
+                        value analysis, loop corrections, and renormalization studies.
+                    </p>
+                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Key Files:</h4>
+                    <ul style="color: var(--text-secondary); margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <li><strong>vev_analysis.py</strong> - Vacuum expectation value calculations</li>
+                        <li><strong>field_equations.py</strong> - Core field equation solver</li>
+                        <li><strong>renormalization.py</strong> - UV divergence analysis</li>
+                    </ul>
+                    <div class="code-block">
+                        <div style="color: var(--text-primary);">
+                            <span style="color: #6b7280;"># Example: Basic field equation solver</span><br>
+                            <span style="color: #3b82f6;">import</span> numpy <span style="color: #3b82f6;">as</span> np<br>
+                            <span style="color: #3b82f6;">from</span> scipy.integrate <span style="color: #3b82f6;">import</span> solve_ivp<br><br>
+                            <span style="color: #3b82f6;">def</span> <span style="color: #10b981;">hyperchronal_field_eq</span>(t, psi, m, lam):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6b7280;"># ∇²Ψ - m²Ψ + λΨ³ = 0</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">return</span> -m**2 * psi + lam * psi**3
+                        </div>
+                    </div>
+                    <a href="qft-analysis.html" class="btn btn-secondary">View QFT Details</a>
+                </div>
+
+                <div class="code-section">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">🌌 Cosmological Simulations</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Universe evolution models incorporating consciousness as a fundamental field. 
+                        Includes dark energy dynamics, CMB signature predictions, and structure formation.
+                    </p>
+                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Key Files:</h4>
+                    <ul style="color: var(--text-secondary); margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <li><strong>quintessence_evolution.py</strong> - Dark energy with consciousness</li>
+                        <li><strong>cmb_signatures.py</strong> - Cosmic microwave background analysis</li>
+                        <li><strong>structure_formation.py</strong> - Galaxy clustering models</li>
+                    </ul>
+                    <div class="code-block">
+                        <div style="color: var(--text-primary);">
+                            <span style="color: #6b7280;"># Friedmann equation with Ψ-field</span><br>
+                            <span style="color: #3b82f6;">def</span> <span style="color: #10b981;">friedmann_with_consciousness</span>(a, H, psi):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;rho_psi = 0.5 * psi**2<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">return</span> (8*np.pi*G/3) * rho_psi
+                        </div>
+                    </div>
+                    <a href="cosmological-sims.html" class="btn btn-secondary">View Cosmic Models</a>
+                </div>
+
+                <div class="code-section">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">🧠 Quantum Biology Models</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Toy models for consciousness-matter coupling in biological systems. Includes the breakthrough 
+                        4-qubit simulations and microtubule quantum coherence studies.
+                    </p>
+                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Key Files:</h4>
+                    <ul style="color: var(--text-secondary); margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <li><strong>quantum_bio_coupling.py</strong> - 4-qubit consciousness models</li>
+                        <li><strong>microtubule_coherence.py</strong> - Neural quantum coherence</li>
+                        <li><strong>neural_networks.py</strong> - Quantum neural network models</li>
+                    </ul>
+                    <div class="code-block">
+                        <div style="color: var(--text-primary);">
+                            <span style="color: #6b7280;"># 4-qubit system with consciousness coupling</span><br>
+                            <span style="color: #3b82f6;">def</span> <span style="color: #10b981;">consciousness_coupled_evolution</span>(gamma, psi_field):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6b7280;"># XY Hamiltonian with Ψ-field coupling</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;coherence = measure_quantum_coherence()<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">return</span> evolve_with_decoherence(gamma * psi_field)
+                        </div>
+                    </div>
+                    <a href="quantum-bio.html" class="btn btn-secondary">View Biology Models</a>
+                </div>
+
+                <div class="code-section">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🎮 Interactive Explorer</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Web-based visualization tools for exploring consciousness field dynamics, quantum coherence 
+                        patterns, and parameter space investigations.
+                    </p>
+                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Features:</h4>
+                    <ul style="color: var(--text-secondary); margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <li>Real-time field equation visualization</li>
+                        <li>Interactive parameter adjustment</li>
+                        <li>Quantum coherence animation</li>
+                        <li>Educational mode with explanations</li>
+                    </ul>
+                    <div class="code-block">
+                        <div style="color: var(--text-primary);">
+                            <span style="color: #6b7280;">// Interactive field visualization</span><br>
+                            <span style="color: #3b82f6;">function</span> <span style="color: #10b981;">animateConsciousnessField</span>() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3b82f6;">const</span> fieldData = calculateFieldEvolution();<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;updateVisualization(fieldData);<br>
+                            }
+                        </div>
+                    </div>
+                    <a href="app/index.html" class="btn btn-secondary">Launch Explorer</a>
+                </div>
+            </div>
+
+            <div style="background: var(--light-surface); border-radius: 1rem; padding: 3rem; margin: 3rem 0; text-align: center;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">🚀 Getting Started with the Code</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Ready to explore consciousness through computation? Here's how to get started with our research codebase.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: left;">
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">1. Install Dependencies</h4>
+                        <div class="code-block" style="margin: 0.5rem 0; font-size: 0.8rem;">
+                            pip install numpy scipy matplotlib<br>
+                            pip install qutip sympy astropy
+                        </div>
+                    </div>
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">2. Clone Repository</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Download the complete codebase and documentation to start exploring consciousness models.
+                        </p>
+                    </div>
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">3. Run Simulations</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Start with the 4-qubit consciousness models, then explore cosmological and QFT calculations.
+                        </p>
+                    </div>
+                    <div style="background: var(--dark-surface); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">4. Contribute</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Submit improvements, new models, or experimental ideas to advance the research.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="mailto:research@hyperchronal.org?subject=Code Access Request" class="btn btn-primary" style="margin-right: 1rem;">
+                        Request Code Access
+                    </a>
+                    <a href="contributing.html" class="btn btn-secondary">
+                        Contributing Guide
+                    </a>
+                </div>
+            </div>
+
+            <div style="background: var(--dark-surface); border-radius: 1rem; padding: 2rem; margin: 2rem 0; border: 1px solid rgba(99, 102, 241, 0.3);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">📋 Code Documentation</h3>
+                <div style="color: var(--text-secondary); line-height: 1.7;">
+                    <p><strong style="color: var(--accent-color);">API Documentation:</strong> All functions include detailed docstrings with mathematical background, parameter descriptions, and usage examples.</p>
+                    <p><strong style="color: var(--accent-color);">Tutorials:</strong> Step-by-step guides for running simulations, understanding the mathematics, and extending the models.</p>
+                    <p><strong style="color: var(--accent-color);">Testing:</strong> Comprehensive test suite ensures reliability and reproducibility of all computational results.</p>
+                    <p><strong style="color: var(--accent-color);">License:</strong> MIT license allows free use for research, education, and commercial applications with attribution.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
