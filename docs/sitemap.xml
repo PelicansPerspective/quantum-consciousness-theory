@@ -18,6 +18,14 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Search functionality (conceptual) -->
+  <url>
+    <loc>https://mindfuluniverse.org/search-index.js</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   <!-- Framework Sections (anchor links) -->
   <url>
     <loc>https://mindfuluniverse.org/#overview</loc>

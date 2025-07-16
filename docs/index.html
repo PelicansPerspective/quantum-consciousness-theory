@@ -142,6 +142,139 @@
             transition: width 0.3s ease;
         }
 
+        /* Search Styles */
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+        }
+
+        .search-input {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            width: 200px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: var(--background);
+            color: var(--text-primary);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            width: 250px;
+        }
+
+        .search-button {
+            position: absolute;
+            right: 0.5rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.25rem;
+            transition: color 0.3s ease;
+        }
+
+        .search-button:hover {
+            color: var(--primary-color);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--background);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+            box-shadow: var(--card-shadow-hover);
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 1001;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-light);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-result-item:hover {
+            background: var(--light-surface);
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .search-result-description {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .search-result-keywords {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .search-keyword {
+            background: var(--light-surface);
+            color: var(--accent-color);
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--background);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+            box-shadow: var(--card-shadow);
+            z-index: 1000;
+            display: none;
+        }
+
+        .search-suggestion {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .search-suggestion:hover {
+            background: var(--light-surface);
+            color: var(--primary-color);
+        }
+
+        .search-suggestion:last-child {
+            border-bottom: none;
+        }
+
         /* Quick Navigation Sidebar */
         .quick-nav {
             position: fixed;
@@ -396,6 +529,23 @@
                 display: none;
             }
 
+            .search-container {
+                position: absolute;
+                top: 60px;
+                left: 1rem;
+                right: 1rem;
+                margin: 0;
+                z-index: 1002;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            .search-input:focus {
+                width: 100%;
+            }
+
             .quick-nav {
                 display: none;
             }
@@ -411,6 +561,10 @@
 
             .nav-container {
                 padding: 0 1rem;
+            }
+
+            main {
+                padding-top: 120px;
             }
         }
 
@@ -435,7 +589,14 @@
         },
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://mindfuluniverse.org/search?q={search_term_string}",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://mindfuluniverse.org/?q={search_term_string}",
+                "actionPlatform": [
+                    "http://schema.org/DesktopWebPlatform",
+                    "http://schema.org/MobileWebPlatform"
+                ]
+            },
             "query-input": "required name=search_term_string"
         }
     }
@@ -484,6 +645,14 @@
                 <span>Hyperchronal Framework</span>
             </a>
             <div class="nav-menu">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search framework..." class="search-input">
+                    <button id="searchButton" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div id="searchResults" class="search-results"></div>
+                    <div id="searchSuggestions" class="search-suggestions"></div>
+                </div>
                 <a href="#theory" class="nav-link">Core Theory</a>
                 <a href="#research" class="nav-link">Research</a>
                 <a href="../app/index.html" class="nav-link">Interactive Explorer</a>
@@ -903,7 +1072,138 @@
         </section>
     </main>
 
+    <!-- Search Index -->
+    <script src="search-index.js"></script>
+    
     <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const searchResults = document.getElementById('searchResults');
+        const searchSuggestions = document.getElementById('searchSuggestions');
+        
+        let searchTimeout;
+        
+        // Perform search
+        function performSearch(query) {
+            if (!query || query.trim().length < 2) {
+                searchResults.style.display = 'none';
+                searchSuggestions.style.display = 'none';
+                return;
+            }
+            
+            const results = searchIndex.search(query);
+            displaySearchResults(results);
+        }
+        
+        // Display search results
+        function displaySearchResults(results) {
+            searchSuggestions.style.display = 'none';
+            
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-title">No results found</div><div class="search-result-description">Try different keywords or browse the sections above.</div></div>';
+                searchResults.style.display = 'block';
+                return;
+            }
+            
+            const html = results.map(result => `
+                <div class="search-result-item" onclick="navigateToResult('${result.url}')">
+                    <div class="search-result-title">${result.title}</div>
+                    <div class="search-result-description">${result.description}</div>
+                    <div class="search-result-keywords">
+                        ${result.matchedTerms.map(term => `<span class="search-keyword">${term}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+            
+            searchResults.innerHTML = html;
+            searchResults.style.display = 'block';
+        }
+        
+        // Display search suggestions
+        function displaySuggestions(suggestions) {
+            if (suggestions.length === 0) {
+                searchSuggestions.style.display = 'none';
+                return;
+            }
+            
+            const html = suggestions.map(suggestion => `
+                <div class="search-suggestion" onclick="selectSuggestion('${suggestion}')">${suggestion}</div>
+            `).join('');
+            
+            searchSuggestions.innerHTML = html;
+            searchSuggestions.style.display = 'block';
+        }
+        
+        // Navigate to search result
+        function navigateToResult(url) {
+            searchResults.style.display = 'none';
+            searchSuggestions.style.display = 'none';
+            searchInput.value = '';
+            
+            if (url.startsWith('#')) {
+                document.querySelector(url).scrollIntoView({ behavior: 'smooth' });
+            } else if (url.startsWith('/app/')) {
+                window.location.href = '../app/index.html';
+            } else {
+                window.location.href = url;
+            }
+        }
+        
+        // Select suggestion
+        function selectSuggestion(suggestion) {
+            searchInput.value = suggestion;
+            searchSuggestions.style.display = 'none';
+            performSearch(suggestion);
+        }
+        
+        // Search input event listeners
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value;
+            
+            clearTimeout(searchTimeout);
+            
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                searchSuggestions.style.display = 'none';
+                return;
+            }
+            
+            // Show suggestions for short queries
+            if (query.length < 4) {
+                const suggestions = searchIndex.getSuggestions(query);
+                displaySuggestions(suggestions);
+            } else {
+                // Debounce search for longer queries
+                searchTimeout = setTimeout(() => {
+                    performSearch(query);
+                }, 300);
+            }
+        });
+        
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch(e.target.value);
+            } else if (e.key === 'Escape') {
+                searchResults.style.display = 'none';
+                searchSuggestions.style.display = 'none';
+                e.target.blur();
+            }
+        });
+        
+        searchButton.addEventListener('click', function() {
+            performSearch(searchInput.value);
+        });
+        
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-container')) {
+                searchResults.style.display = 'none';
+                searchSuggestions.style.display = 'none';
+            }
+        });
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
