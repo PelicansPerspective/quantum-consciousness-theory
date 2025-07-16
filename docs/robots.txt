@@ -6,7 +6,7 @@ Allow: /index.html
 Allow: /app/
 
 # Sitemap location
-Sitemap: https://mindfuluniverse.org/sitemap.xml
+Sitemap: https://pelicansperspective.com/sitemap.xml
 
 # Crawl delay for politeness
 Crawl-delay: 1

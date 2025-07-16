@@ -4,7 +4,7 @@
   
   <!-- Main Page -->
   <url>
-    <loc>https://mindfuluniverse.org/</loc>
+    <loc>https://pelicansperspective.com/</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -12,7 +12,7 @@
   
   <!-- Interactive Explorer -->
   <url>
-    <loc>https://mindfuluniverse.org/app/</loc>
+    <loc>https://pelicansperspective.com/app/</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -20,7 +20,7 @@
   
   <!-- Search functionality (conceptual) -->
   <url>
-    <loc>https://mindfuluniverse.org/search-index.js</loc>
+    <loc>https://pelicansperspective.com/search-index.js</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -28,42 +28,42 @@
   
   <!-- Framework Sections (anchor links) -->
   <url>
-    <loc>https://mindfuluniverse.org/#overview</loc>
+    <loc>https://pelicansperspective.com/#overview</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://mindfuluniverse.org/#mathematical-foundation</loc>
+    <loc>https://pelicansperspective.com/#mathematical-foundation</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://mindfuluniverse.org/#consciousness</loc>
+    <loc>https://pelicansperspective.com/#consciousness</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://mindfuluniverse.org/#cosmology</loc>
+    <loc>https://pelicansperspective.com/#cosmology</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://mindfuluniverse.org/#applications</loc>
+    <loc>https://pelicansperspective.com/#applications</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mindfuluniverse.org/#faq</loc>
+    <loc>https://pelicansperspective.com/#faq</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
